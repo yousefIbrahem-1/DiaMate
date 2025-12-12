@@ -1,5 +1,8 @@
-# DiaMate Web API
 
+# DiaMate Web API 
+<p align="center">
+  <img src="logo.png" width="180" />
+</p>
 Welcome to the **DiaMate Web API** — a dedicated backend application built on ASP.NET Core to manage data, authentication, and services.
 The system provides a secure, flexible API foundation using Entity Framework Core, SQL Server, and JWT Authentication.
 
@@ -172,12 +175,45 @@ The connection string for SQL Server is referenced in `Program.cs` as `"MyConnec
 
 
 ```
+```
 {
   "ConnectionStrings": {
     "MyConnection": "Server=...;Database=DiaMateDb;User Id=...;Password=..."
   }
 }
+```
+## Modules
 
+### 1. Identity Module
+- `AppUser` and `IdentityRole` management  
+- Stores user credentials and profile data  
+
+### 2. Data Module
+- `AppDbContext` for managing tables  
+- Handles CRUD (Create, Read, Update, Delete) operations  
+
+### 3. Authentication Module
+- Handles validation and generation of **JWT tokens**  
+- Secures endpoints using the `[Authorize]` attribute  
+
+---
+
+## Data Flow
+
+```mermaid
+graph TD
+    A[Frontend/Client: http://localhost:5173] -->|HTTP Request| B(CORS Middleware)
+    B --> C{Authentication/Authorization Middleware}
+    C --> |Authenticated| D(API Controller)
+    D --> E(Service/Business Logic)
+    E --> F[AppDbContext/Entity Framework Core]
+    F --> |SQL Queries| G(SQL Server Database)
+    G --> F
+    F --> E
+    E --> D
+    D --> |JSON Response| C
+    C --> A
+```
 ## Database Setup
 
 The project uses **Entity Framework Core Code-First**.
