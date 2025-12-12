@@ -1,0 +1,403 @@
+[
+  {
+    "ContainingType": "DiaMate.Controllers.AccountController",
+    "Method": "Get",
+    "RelativePath": "api/Account",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiaMate.Controllers.AccountController",
+    "Method": "ChangePassword",
+    "RelativePath": "api/Account/ChangePassword",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "DiaMate.dtoModels.dtoChangePassword",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiaMate.Controllers.AccountController",
+    "Method": "LogIn",
+    "RelativePath": "api/Account/LogIn",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "DiaMate.dtoModels.dtoLogin",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiaMate.Controllers.AccountController",
+    "Method": "RegisterNewUser",
+    "RelativePath": "api/Account/RegisterNewUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "DiaMate.dtoModels.dtoNewUser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiaMate.Controllers.BloodGlucoseReadingController",
+    "Method": "AddReadingForPatient",
+    "RelativePath": "api/BloodGlucoseReading/AddReadingForPatient",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dtoBloodGlucoseReading",
+        "Type": "DiaMate.dtoModels.dtoBloodGlucoseReading",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiaMate.Controllers.BloodGlucoseReadingController",
+    "Method": "GetAllReadingsForPatient",
+    "RelativePath": "api/BloodGlucoseReading/GetAllReadingsForPatient/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiaMate.Controllers.BloodGlucoseReadingController",
+    "Method": "GetReadingsByDateForPatient",
+    "RelativePath": "api/BloodGlucoseReading/GetReadingsByDateForPatient/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "readingDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiaMate.Controllers.BloodGlucoseReadingController",
+    "Method": "GetReadingsByDateRangeForPatient",
+    "RelativePath": "api/BloodGlucoseReading/GetReadingsByDateRangeForPatient/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "FromReadingDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ToReadingDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiaMate.Controllers.BloodGlucoseReadingController",
+    "Method": "GetTheLastReadingForPatient",
+    "RelativePath": "api/BloodGlucoseReading/GetTheLastReadingForPatient/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiaMate.Controllers.FootUlcerImageController",
+    "Method": "AddFootUlcerImageForPatient",
+    "RelativePath": "api/FootUlcerImage/AddFootUlcerImageForPatient",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dtoFootUlcerImage",
+        "Type": "DiaMate.dtoModels.dtoFootUlcerImage",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiaMate.Controllers.FootUlcerImageController",
+    "Method": "GetAllFootUlcerImagesForPatient",
+    "RelativePath": "api/FootUlcerImage/GetAllFootUlcerImagesForPatient/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiaMate.Controllers.FootUlcerImageController",
+    "Method": "GetFootUlcerByDateForPatient",
+    "RelativePath": "api/FootUlcerImage/GetFootUlcerByDateForPatient/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "UploadDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiaMate.Controllers.FootUlcerImageController",
+    "Method": "GetFootUlcerByDateRangeForPatient",
+    "RelativePath": "api/FootUlcerImage/GetFootUlcerByDateRangeForPatient/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "fromUploadDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "toUploadDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiaMate.Controllers.FootUlcerImageController",
+    "Method": "GetLastFootUlcerImageForPatient",
+    "RelativePath": "api/FootUlcerImage/GetLastFootUlcerImageForPatient/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiaMate.Controllers.LabTestController",
+    "Method": "AddNewLabTestForPatient",
+    "RelativePath": "api/LabTest/AddNewLabTestForPatient/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dtoLabTest",
+        "Type": "DiaMate.dtoModels.dtoLabTest",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiaMate.Controllers.LabTestController",
+    "Method": "GetAllTestsForPatient",
+    "RelativePath": "api/LabTest/GetAllTestsForPatient/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiaMate.Controllers.LabTestController",
+    "Method": "GetTheLastTestForPatient",
+    "RelativePath": "api/LabTest/GetTheLastTestForPatient/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiaMate.Controllers.LabTestController",
+    "Method": "GetTheTestByDateForPatient",
+    "RelativePath": "api/LabTest/GetTheTestByDateForPatient/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "TestDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiaMate.Controllers.LabTestController",
+    "Method": "GetTheTestByDateRangeForPatient",
+    "RelativePath": "api/LabTest/GetTheTestByDateRangeForPatient/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "fromTestDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "toTestDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiaMate.Controllers.MedicineController",
+    "Method": "GetAllMedicineForPatient",
+    "RelativePath": "api/Medicine/GetAllMedicineForPatient/{PatientId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PatientId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiaMate.Controllers.PatientsController",
+    "Method": "GetPatient",
+    "RelativePath": "api/Patients/GetPatient/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiaMate.Controllers.PatientsController",
+    "Method": "UpdatePatient",
+    "RelativePath": "api/Patients/UpdatePatient/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dtoPatient",
+        "Type": "DiaMate.dtoModels.dtoPatient",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

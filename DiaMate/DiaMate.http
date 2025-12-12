@@ -1,0 +1,6 @@
+@DiaMate_HostAddress = http://localhost:5277
+
+GET {{DiaMate_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,820 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "DiaMate, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Account/RegisterNewUser": {
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/dtoNewUser"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Account/LogIn": {
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/dtoLogin"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Account/ChangePassword": {
+      "patch": {
+        "tags": [
+          "Account"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/dtoChangePassword"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/BloodGlucoseReading/GetAllReadingsForPatient/{id}": {
+      "get": {
+        "tags": [
+          "BloodGlucoseReading"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/BloodGlucoseReading/GetTheLastReadingForPatient/{id}": {
+      "get": {
+        "tags": [
+          "BloodGlucoseReading"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/BloodGlucoseReading/GetReadingsByDateForPatient/{id}": {
+      "get": {
+        "tags": [
+          "BloodGlucoseReading"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "readingDate",
+            "type": "string",
+            "format": "date-time"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/BloodGlucoseReading/GetReadingsByDateRangeForPatient/{id}": {
+      "get": {
+        "tags": [
+          "BloodGlucoseReading"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "FromReadingDate",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "in": "query",
+            "name": "ToReadingDate",
+            "type": "string",
+            "format": "date-time"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/BloodGlucoseReading/AddReadingForPatient": {
+      "post": {
+        "tags": [
+          "BloodGlucoseReading"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/dtoBloodGlucoseReading"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/FootUlcerImage/GetAllFootUlcerImagesForPatient/{id}": {
+      "get": {
+        "tags": [
+          "FootUlcerImage"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/FootUlcerImage/GetLastFootUlcerImageForPatient/{id}": {
+      "get": {
+        "tags": [
+          "FootUlcerImage"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/FootUlcerImage/GetFootUlcerByDateForPatient/{id}": {
+      "get": {
+        "tags": [
+          "FootUlcerImage"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "UploadDate",
+            "type": "string",
+            "format": "date-time"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/FootUlcerImage/GetFootUlcerByDateRangeForPatient/{id}": {
+      "get": {
+        "tags": [
+          "FootUlcerImage"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "fromUploadDate",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "in": "query",
+            "name": "toUploadDate",
+            "type": "string",
+            "format": "date-time"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/FootUlcerImage/AddFootUlcerImageForPatient": {
+      "post": {
+        "tags": [
+          "FootUlcerImage"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/dtoFootUlcerImage"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/LabTest/GetAllTestsForPatient/{id}": {
+      "get": {
+        "tags": [
+          "LabTest"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/LabTest/GetTheLastTestForPatient/{id}": {
+      "get": {
+        "tags": [
+          "LabTest"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/LabTest/GetTheTestByDateForPatient/{id}": {
+      "get": {
+        "tags": [
+          "LabTest"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "TestDate",
+            "type": "string",
+            "format": "date-time"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/LabTest/GetTheTestByDateRangeForPatient/{id}": {
+      "get": {
+        "tags": [
+          "LabTest"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "fromTestDate",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "in": "query",
+            "name": "toTestDate",
+            "type": "string",
+            "format": "date-time"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/LabTest/AddNewLabTestForPatient/{id}": {
+      "post": {
+        "tags": [
+          "LabTest"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/dtoLabTest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Patients/GetPatient/{id}": {
+      "get": {
+        "tags": [
+          "Patients"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Patients/UpdatePatient/{id}": {
+      "put": {
+        "tags": [
+          "Patients"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/dtoPatient"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "dtoBloodGlucoseReading": {
+      "required": [
+        "measurementType",
+        "patientId"
+      ],
+      "type": "object",
+      "properties": {
+        "patientId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "reading_value": {
+          "format": "double",
+          "type": "number"
+        },
+        "measurementTime": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "measurementType": {
+          "format": "int32",
+          "maximum": 3,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "dtoChangePassword": {
+      "required": [
+        "currentPassword",
+        "newPassword"
+      ],
+      "type": "object",
+      "properties": {
+        "currentPassword": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "newPassword": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "dtoFootUlcerImage": {
+      "required": [
+        "patientId"
+      ],
+      "type": "object",
+      "properties": {
+        "patientId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "image": {
+          "format": "byte",
+          "type": "string"
+        },
+        "uploadDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "ai_detectionResult": {
+          "maxLength": 250,
+          "type": "string"
+        },
+        "aiConfidence": {
+          "format": "double",
+          "type": "number"
+        },
+        "notes": {
+          "maxLength": 500,
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "dtoLabTest": {
+      "required": [
+        "patientId"
+      ],
+      "type": "object",
+      "properties": {
+        "patientId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "testName": {
+          "maxLength": 150,
+          "type": "string"
+        },
+        "result_value": {
+          "format": "double",
+          "maxLength": 500,
+          "type": "number"
+        },
+        "normalRange": {
+          "maxLength": 50,
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "testDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "report_Image": {
+          "format": "byte",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "dtoLogin": {
+      "required": [
+        "password",
+        "userName"
+      ],
+      "type": "object",
+      "properties": {
+        "userName": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "password": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "dtoNewUser": {
+      "required": [
+        "dateOfBirth",
+        "email",
+        "firstName",
+        "gender",
+        "password",
+        "phone",
+        "secondName",
+        "userName",
+        "weight"
+      ],
+      "type": "object",
+      "properties": {
+        "userName": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "password": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "firstName": {
+          "maxLength": 50,
+          "minLength": 1,
+          "type": "string"
+        },
+        "secondName": {
+          "maxLength": 50,
+          "minLength": 1,
+          "type": "string"
+        },
+        "thirdName": {
+          "maxLength": 50,
+          "type": "string"
+        },
+        "lastName": {
+          "maxLength": 50,
+          "type": "string"
+        },
+        "dateOfBirth": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "gender": {
+          "format": "int32",
+          "maximum": 1,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "address": {
+          "type": "string"
+        },
+        "phone": {
+          "maxLength": 11,
+          "minLength": 11,
+          "type": "string"
+        },
+        "homePhone": {
+          "maxLength": 11,
+          "type": "string"
+        },
+        "email": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "profileImage": {
+          "format": "byte",
+          "type": "string"
+        },
+        "weight": {
+          "format": "double",
+          "type": "number"
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "dtoPatient": {
+      "required": [
+        "dateOfBirth",
+        "email",
+        "firstName",
+        "gender",
+        "phone",
+        "secondName",
+        "weight"
+      ],
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "maxLength": 50,
+          "minLength": 1,
+          "type": "string"
+        },
+        "secondName": {
+          "maxLength": 50,
+          "minLength": 1,
+          "type": "string"
+        },
+        "thirdName": {
+          "maxLength": 50,
+          "type": "string"
+        },
+        "lastName": {
+          "maxLength": 50,
+          "type": "string"
+        },
+        "dateOfBirth": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "gender": {
+          "format": "int32",
+          "maximum": 1,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "address": {
+          "type": "string"
+        },
+        "phone": {
+          "maxLength": 11,
+          "minLength": 11,
+          "type": "string"
+        },
+        "homePhone": {
+          "maxLength": 11,
+          "type": "string"
+        },
+        "email": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "profileImage": {
+          "format": "byte",
+          "type": "string"
+        },
+        "weight": {
+          "format": "double",
+          "type": "number"
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
