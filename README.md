@@ -1,9 +1,9 @@
 
-# DiaMate Web API 
+# DiaMate 
 <p align="center">
   <img src="logo.png" width="180" />
 </p>
-Welcome to the **DiaMate Web API** — a dedicated backend application built on ASP.NET Core to manage data, authentication, and services.
+Welcome to the **DiaMate** (DiaMate is an AI-powered mobile health assistant for diabetic patients, providing smart guidance using a medical RAG chatbot, food-image calorie estimation, diabetic-foot-ulcer analysis, and automated lab-result processing. The system helps users track glucose, medication, and meals with high accuracy.) — a dedicated backend application built on ASP.NET Core to manage data, authentication, and services.
 The system provides a secure, flexible API foundation using Entity Framework Core, SQL Server, and JWT Authentication.
 
 ---
