@@ -3,20 +3,42 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DiaMate.Data.models
 {
+    public enum enDiabetesType
+    {
+        Type1 = 1,
+        Type2 = 2,
+        Gestational = 3,
+        Prediabetes = 4,
+        Other = 5
+    }
     public class Patient
     {
         [Key]
         public int PatientId { get; set; }
 
+        public DateTime DateOfDiagnosis { get; set; }
+
+
+        [Required, Range(1, 5,
+        ErrorMessage = "Value for {0} must be between {1} and {2}.")]
+        public short DiabetesType { get; set; } 
+
         [Required,Range(40, 200,
         ErrorMessage = "Value for {0} must be between {1} and {2}.")]
         public double Weight { get; set; }
 
+        [Required, Range(100, 230,
+       ErrorMessage = "Value for {0} must be between {1} and {2}.")]
+        public double Height { get; set; } = 150.00;
+
+        public byte[]? QrCodeBase64 { get; set; }
+
         public string? Notes {  get; set; }=null;
 
-        [Required,ForeignKey(nameof(Person))]
+      
         public int PersonId { set; get; }
 
+        [Required, ForeignKey(nameof(PersonId))]
         public Person Person { set; get; }
 
         public AppUser UserAccount { get; set; }

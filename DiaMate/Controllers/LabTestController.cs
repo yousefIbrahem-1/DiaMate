@@ -1,6 +1,7 @@
 ﻿using DiaMate.Data;
 using DiaMate.Data.models;
 using DiaMate.dtoModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +10,7 @@ namespace DiaMate.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class LabTestController : ControllerBase
     {
         public LabTestController(AppDbContext db)
@@ -157,7 +159,7 @@ namespace DiaMate.Controllers
             return Unauthorized();
         }
 
-        [HttpPost("[action]/{id}")]
+        [HttpPost("[action]/")]
         public async Task<IActionResult> AddNewLabTestForPatient(dtoLabTest dtoLabTest)
         {
             if (int.Parse(User.FindFirst("PatientId")?.Value) == dtoLabTest.PatientId)

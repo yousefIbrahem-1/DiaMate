@@ -8,9 +8,10 @@ namespace DiaMate.Data.models
     {
        
 
-        [Required,ForeignKey(nameof(Patient))]
+     
         public int PatientId { get; set; }
-        
+
+        [Required, ForeignKey(nameof(PatientId))]
         public Patient Patient { get; set; }
 
        

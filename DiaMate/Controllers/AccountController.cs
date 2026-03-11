@@ -41,13 +41,14 @@ namespace DiaMate.Controllers
                     UserName = user.UserName,
                     Patient = new Patient
                     {
+                        DateOfDiagnosis =user.DateOfDiagnosis,
+                        DiabetesType = user.DiabetesType,
+                        Height =user.Height,
                         Weight = user.Weight,
                         Notes = user.Notes,
                         Person = new Person
                         {
                             FirstName = user.FirstName,
-                            SecondName = user.SecondName,
-                            ThirdName = user.ThirdName,
                             LastName = user.LastName,
                             Gender = user.Gender,
                             Email = user.Email,
@@ -67,7 +68,7 @@ namespace DiaMate.Controllers
                 if (result.Succeeded)
                 {
                   
-                    return Ok();
+                    return Ok("message:now you have account");
                 }
                 else
                 {
@@ -78,7 +79,8 @@ namespace DiaMate.Controllers
                     }
                 }
             }
-            return BadRequest(ModelState);
+            return BadRequest("message: "+ModelState);
+
         }
 
         [HttpPost("[action]")]

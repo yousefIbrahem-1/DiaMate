@@ -35,8 +35,6 @@ namespace DiaMate.Controllers
                     dtoPatient dtoPatient = new dtoPatient()
                     { 
                         FirstName = Patient.Person.FirstName,
-                        SecondName = Patient.Person.SecondName,
-                        ThirdName = Patient.Person.ThirdName,
                         LastName = Patient.Person.LastName,
                         Gender = Patient.Person.Gender,
                         Phone = Patient.Person.Phone,
@@ -82,12 +80,13 @@ namespace DiaMate.Controllers
                     var Patient = await _db.Patients.Include(p => p.Person).SingleOrDefaultAsync(p => p.PatientId == id);
                     if (Patient != null)
                     {
+                        Patient.DateOfDiagnosis = dtoPatient.DateOfDiagnosis;
+                        Patient.DiabetesType = dtoPatient.DiabetesType;
+                        Patient.Height = dtoPatient.Height;
                         Patient.Weight = dtoPatient.Weight;
                         Patient.Notes = dtoPatient.Notes;
 
                         Patient.Person.FirstName = dtoPatient.FirstName;
-                        Patient.Person.SecondName = dtoPatient.SecondName;
-                        Patient.Person.ThirdName = dtoPatient.ThirdName;
                         Patient.Person.LastName = dtoPatient.LastName;
                         Patient.Person.Address = dtoPatient.Address;
                         Patient.Person.DateOfBirth = dtoPatient.DateOfBirth;

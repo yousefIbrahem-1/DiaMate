@@ -15,12 +15,6 @@ namespace DiaMate.dtoModels
         [Required, MaxLength(50)]
         public string FirstName { set; get; }
 
-        [Required, MaxLength(50)]
-        public string SecondName { set; get; }
-
-        [MaxLength(50)]
-        public string? ThirdName { set; get; } = null;
-            
         [MaxLength(50)]
         public string? LastName { set; get; } = null;
 
@@ -47,9 +41,19 @@ namespace DiaMate.dtoModels
 
         public byte[]? ProfileImage { set; get; }= null;
 
+        [Required, Range(1, 5,
+       ErrorMessage = "Value for {0} must be between {1} and {2}.")]
+        public DateTime DateOfDiagnosis { get; set; }
 
-        [Required]
+        public short DiabetesType { get; set; } = (short)enDiabetesType.Type1;
+
+        [Required, Range(40, 200,
+        ErrorMessage = "Value for {0} must be between {1} and {2}.")]
         public double Weight { get; set; }
+
+        [Required, Range(100, 230,
+       ErrorMessage = "Value for {0} must be between {1} and {2}.")]
+        public double Height { get; set; } = 150.00;
 
         public string? Notes { get; set; }= null;
 

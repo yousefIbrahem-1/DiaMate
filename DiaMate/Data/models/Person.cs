@@ -14,12 +14,6 @@ namespace DiaMate.Data.models
         [Required,MaxLength(50)]
         public string FirstName { set; get; }
 
-        [Required, MaxLength(50)]
-        public string SecondName { set; get; }
-
-        [MaxLength(50)]
-        public string? ThirdName { set; get; } = null;
-
         [MaxLength(50)]
         public string? LastName { set; get; } = null;
 
@@ -27,7 +21,7 @@ namespace DiaMate.Data.models
         public string FullName
         {
             
-            get { return FirstName + " " + SecondName + " " + ThirdName + " " + LastName; }
+            get { return FirstName + " " + LastName; }
 
         }
         [Required,Range(typeof(DateTime), "1/1/1900", "1/1/2010",

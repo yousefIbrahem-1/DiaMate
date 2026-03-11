@@ -8,10 +8,9 @@ namespace DiaMate.Data.models
         [Key]
         public int MealId { get; set; }
 
-        [Required,ForeignKey(nameof(Patient))]
         public int PatientId { get; set; }
 
-        
+        [Required, ForeignKey(nameof(PatientId))]
         public Patient Patient { get; set; }
 
         
@@ -23,5 +22,12 @@ namespace DiaMate.Data.models
 
 
         public string? Notes { get; set; }
+
+        
+            //"calories": 950,
+            //"protein": 70,
+            //"fats": 40,
+            //"carbs": 180,
+            //"createdAt": "2026-02-23T10:30:00"
     }
 }

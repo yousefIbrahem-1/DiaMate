@@ -250,7 +250,7 @@
   {
     "ContainingType": "DiaMate.Controllers.LabTestController",
     "Method": "AddNewLabTestForPatient",
-    "RelativePath": "api/LabTest/AddNewLabTestForPatient/{id}",
+    "RelativePath": "api/LabTest/AddNewLabTestForPatient",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -258,11 +258,6 @@
       {
         "Name": "dtoLabTest",
         "Type": "DiaMate.dtoModels.dtoLabTest",
-        "IsRequired": true
-      },
-      {
-        "Name": "id",
-        "Type": "",
         "IsRequired": true
       }
     ],
@@ -349,6 +344,22 @@
   },
   {
     "ContainingType": "DiaMate.Controllers.MedicineController",
+    "Method": "AddNewMedicine",
+    "RelativePath": "api/Medicine/AddNewMedicine",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dtoMedicine",
+        "Type": "DiaMate.dtoModels.dtoMedicine",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiaMate.Controllers.MedicineController",
     "Method": "GetAllMedicineForPatient",
     "RelativePath": "api/Medicine/GetAllMedicineForPatient/{PatientId}",
     "HttpMethod": "GET",
@@ -359,6 +370,69 @@
         "Name": "PatientId",
         "Type": "System.Int32",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiaMate.Controllers.MedicineController",
+    "Method": "GetTheLastMedicineForPatient",
+    "RelativePath": "api/Medicine/GetTheLastMedicineForPatient/{PatientId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PatientId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiaMate.Controllers.MedicineController",
+    "Method": "GetTheMedicineByDateForPatient",
+    "RelativePath": "api/Medicine/GetTheMedicineByDateForPatient/{PatientId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PatientId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "startDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiaMate.Controllers.MedicineController",
+    "Method": "GetTheMedicineByDateRangeForPatient",
+    "RelativePath": "api/Medicine/GetTheMedicineByDateRangeForPatient/{PatientId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PatientId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "FromDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ToDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

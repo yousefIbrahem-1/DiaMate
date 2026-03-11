@@ -118,7 +118,7 @@ namespace DiaMate.Migrations
 
                     b.HasIndex("PatientId");
 
-                    b.ToTable("Appointments", (string)null);
+                    b.ToTable("Appointments");
                 });
 
             modelBuilder.Entity("DiaMate.Data.models.BloodGlucoseReading", b =>
@@ -148,7 +148,7 @@ namespace DiaMate.Migrations
 
                     b.HasIndex("PatientId");
 
-                    b.ToTable("BloodGlucoseReadings", (string)null);
+                    b.ToTable("BloodGlucoseReadings");
                 });
 
             modelBuilder.Entity("DiaMate.Data.models.FootUlcerImage", b =>
@@ -159,7 +159,7 @@ namespace DiaMate.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ImageId"));
 
-                    b.Property<decimal?>("AIConfidence")
+                    b.Property<decimal>("AIConfidence")
                         .HasColumnType("decimal(5,2)");
 
                     b.Property<string>("Ai_detectionResult")
@@ -185,7 +185,7 @@ namespace DiaMate.Migrations
 
                     b.HasIndex("PatientId");
 
-                    b.ToTable("FootUlcerImages", (string)null);
+                    b.ToTable("FootUlcerImages");
                 });
 
             modelBuilder.Entity("DiaMate.Data.models.LabTest", b =>
@@ -227,7 +227,7 @@ namespace DiaMate.Migrations
 
                     b.HasIndex("PatientId");
 
-                    b.ToTable("LabTests", (string)null);
+                    b.ToTable("LabTests");
                 });
 
             modelBuilder.Entity("DiaMate.Data.models.Meal", b =>
@@ -254,7 +254,7 @@ namespace DiaMate.Migrations
 
                     b.HasIndex("PatientId");
 
-                    b.ToTable("Meals", (string)null);
+                    b.ToTable("Meals");
                 });
 
             modelBuilder.Entity("DiaMate.Data.models.Medicine", b =>
@@ -297,7 +297,7 @@ namespace DiaMate.Migrations
 
                     b.HasIndex("PatientId");
 
-                    b.ToTable("Medicines", (string)null);
+                    b.ToTable("Medicines");
                 });
 
             modelBuilder.Entity("DiaMate.Data.models.Notification", b =>
@@ -331,7 +331,7 @@ namespace DiaMate.Migrations
 
                     b.HasIndex("PatientId");
 
-                    b.ToTable("Notifications", (string)null);
+                    b.ToTable("Notifications");
                 });
 
             modelBuilder.Entity("DiaMate.Data.models.Patient", b =>
@@ -341,6 +341,15 @@ namespace DiaMate.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PatientId"));
+
+                    b.Property<DateTime>("DateOfDiagnosis")
+                        .HasColumnType("datetime2");
+
+                    b.Property<short>("DiabetesType")
+                        .HasColumnType("smallint");
+
+                    b.Property<double>("Height")
+                        .HasColumnType("float");
 
                     b.Property<string>("Notes")
                         .HasColumnType("nvarchar(max)");
@@ -356,7 +365,7 @@ namespace DiaMate.Migrations
                     b.HasIndex("PersonId")
                         .IsUnique();
 
-                    b.ToTable("Patients", (string)null);
+                    b.ToTable("Patients");
                 });
 
             modelBuilder.Entity("DiaMate.Data.models.Person", b =>
@@ -401,21 +410,12 @@ namespace DiaMate.Migrations
                     b.Property<byte[]>("ProfileImage")
                         .HasColumnType("varbinary(max)");
 
-                    b.Property<string>("SecondName")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("ThirdName")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
                     b.HasKey("PersonID");
 
                     b.HasIndex("Email")
                         .IsUnique();
 
-                    b.ToTable("Persons", (string)null);
+                    b.ToTable("Persons");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

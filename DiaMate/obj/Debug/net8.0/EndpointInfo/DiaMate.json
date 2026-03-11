@@ -520,20 +520,10 @@
         }
       }
     },
-    "/api/LabTest/AddNewLabTestForPatient/{id}": {
+    "/api/LabTest/AddNewLabTestForPatient": {
       "post": {
         "tags": [
           "LabTest"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
         ],
         "requestBody": {
           "content": {
@@ -577,6 +567,130 @@
             }
           }
         ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Medicine/GetTheLastMedicineForPatient/{PatientId}": {
+      "get": {
+        "tags": [
+          "Medicine"
+        ],
+        "parameters": [
+          {
+            "name": "PatientId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Medicine/GetTheMedicineByDateForPatient/{PatientId}": {
+      "get": {
+        "tags": [
+          "Medicine"
+        ],
+        "parameters": [
+          {
+            "name": "PatientId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "startDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Medicine/GetTheMedicineByDateRangeForPatient/{PatientId}": {
+      "get": {
+        "tags": [
+          "Medicine"
+        ],
+        "parameters": [
+          {
+            "name": "PatientId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "FromDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "ToDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Medicine/AddNewMedicine": {
+      "post": {
+        "tags": [
+          "Medicine"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/dtoMedicine"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/dtoMedicine"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/dtoMedicine"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -800,15 +914,59 @@
         },
         "additionalProperties": false
       },
+      "dtoMedicine": {
+        "required": [
+          "dosage",
+          "frequency",
+          "name",
+          "patientId"
+        ],
+        "type": "object",
+        "properties": {
+          "patientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "dosage": {
+            "maxLength": 50,
+            "minLength": 1,
+            "type": "string"
+          },
+          "frequency": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "notes": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "dtoNewUser": {
         "required": [
           "dateOfBirth",
           "email",
           "firstName",
           "gender",
+          "height",
           "password",
           "phone",
-          "secondName",
           "userName",
           "weight"
         ],
@@ -827,16 +985,6 @@
             "minLength": 1,
             "type": "string"
           },
-          "secondName": {
-            "maxLength": 50,
-            "minLength": 1,
-            "type": "string"
-          },
-          "thirdName": {
-            "maxLength": 50,
-            "type": "string",
-            "nullable": true
-          },
           "lastName": {
             "maxLength": 50,
             "type": "string",
@@ -875,7 +1023,23 @@
             "format": "byte",
             "nullable": true
           },
+          "dateOfDiagnosis": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "diabetesType": {
+            "type": "integer",
+            "format": "int32"
+          },
           "weight": {
+            "maximum": 200,
+            "minimum": 40,
+            "type": "number",
+            "format": "double"
+          },
+          "height": {
+            "maximum": 230,
+            "minimum": 100,
             "type": "number",
             "format": "double"
           },
@@ -892,8 +1056,8 @@
           "email",
           "firstName",
           "gender",
+          "height",
           "phone",
-          "secondName",
           "weight"
         ],
         "type": "object",
@@ -902,16 +1066,6 @@
             "maxLength": 50,
             "minLength": 1,
             "type": "string"
-          },
-          "secondName": {
-            "maxLength": 50,
-            "minLength": 1,
-            "type": "string"
-          },
-          "thirdName": {
-            "maxLength": 50,
-            "type": "string",
-            "nullable": true
           },
           "lastName": {
             "maxLength": 50,
@@ -951,7 +1105,23 @@
             "format": "byte",
             "nullable": true
           },
+          "dateOfDiagnosis": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "diabetesType": {
+            "type": "integer",
+            "format": "int32"
+          },
           "weight": {
+            "maximum": 200,
+            "minimum": 40,
+            "type": "number",
+            "format": "double"
+          },
+          "height": {
+            "maximum": 230,
+            "minimum": 100,
             "type": "number",
             "format": "double"
           },

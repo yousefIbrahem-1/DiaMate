@@ -3,12 +3,128 @@
   "WorkspaceRootPath": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\data\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\data\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\data\\models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\data\\models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\services\\qrcodeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\services\\qrcodeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\iservices\\iqrcodeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\iservices\\iqrcodeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\iservices\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\iservices\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\data\\models\\companion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\data\\models\\companion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\data\\models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\data\\models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\dtomodels\\dtonewuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\dtomodels\\dtonewuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\dtomodels\\dtochangepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\dtomodels\\dtochangepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\dtomodels\\dtopatient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\dtomodels\\dtopatient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\controllers\\patientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\controllers\\patientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\controllers\\bloodglucosereadingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\controllers\\bloodglucosereadingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\controllers\\footulcerimagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\controllers\\footulcerimagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\controllers\\labtestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\controllers\\labtestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\controllers\\mealcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\controllers\\mealcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\controllers\\medicinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\controllers\\medicinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\data\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\data\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\data\\models\\medicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\data\\models\\medicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\data\\models\\meal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\data\\models\\meal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\data\\models\\labtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\data\\models\\labtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\data\\models\\footulcerimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\data\\models\\footulcerimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\data\\models\\bloodglucosereading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\data\\models\\bloodglucosereading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\data\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\data\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\dtomodels\\dtofootulcerimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\dtomodels\\dtofootulcerimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\dtomodels\\dtoappointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\dtomodels\\dtoappointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\dtomodels\\dtomeal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\dtomodels\\dtomeal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\dtomodels\\dtolabtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\dtomodels\\dtolabtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -19,100 +135,32 @@
       "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\diamate.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\controllers\\bloodglucosereadingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\controllers\\bloodglucosereadingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\controllers\\labtestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\controllers\\labtestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\controllers\\medicinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\controllers\\medicinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\dtomodels\\dtomedicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\dtomodels\\dtomedicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\dtomodels\\dtofootulcerimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\dtomodels\\dtofootulcerimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\dtomodels\\dtobloodglucosereading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\dtomodels\\dtobloodglucosereading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\dtomodels\\dtochangepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\dtomodels\\dtochangepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\dtomodels\\dtolabtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\dtomodels\\dtolabtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\dtomodels\\dtologin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\dtomodels\\dtologin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\dtomodels\\dtonewuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\dtomodels\\dtonewuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\dtomodels\\dtopatient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\dtomodels\\dtopatient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\data\\models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\data\\models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\data\\models\\bloodglucosereading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\data\\models\\bloodglucosereading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\data\\models\\footulcerimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\data\\models\\footulcerimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\data\\models\\labtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\data\\models\\labtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\data\\models\\meal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\data\\models\\meal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\data\\models\\medicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\data\\models\\medicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\data\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\data\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\data\\models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\data\\models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\data\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\data\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\data\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\data\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\controllers\\footulcerimagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\controllers\\footulcerimagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\controllers\\patientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\controllers\\patientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\migrations\\20260225202321_updatepatientatt1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\migrations\\20260225202321_updatepatientatt1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\migrations\\20260225195225_removename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\migrations\\20260225195225_removename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|c:\\users\\yoseef eprahem\\source\\repos\\diamate\\diamate\\migrations\\20260225194447_updatepatientatt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC6B9C70-E534-4B2B-A91C-9F285C221278}|DiaMate\\DiaMate.csproj|solutionrelative:diamate\\migrations\\20260225194447_updatepatientatt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -122,7 +170,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -130,129 +178,95 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BloodGlucoseReadingController.cs",
-              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Controllers\\BloodGlucoseReadingController.cs",
-              "RelativeDocumentMoniker": "DiaMate\\Controllers\\BloodGlucoseReadingController.cs",
-              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Controllers\\BloodGlucoseReadingController.cs",
-              "RelativeToolTip": "DiaMate\\Controllers\\BloodGlucoseReadingController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAkAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "QrCodeService.cs",
+              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Services\\QrCodeService.cs",
+              "RelativeDocumentMoniker": "DiaMate\\Services\\QrCodeService.cs",
+              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Services\\QrCodeService.cs",
+              "RelativeToolTip": "DiaMate\\Services\\QrCodeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T22:48:00.317Z"
+              "WhenOpened": "2026-03-04T20:54:26.61Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "DiaMate.http",
-              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\DiaMate.http",
-              "RelativeDocumentMoniker": "DiaMate\\DiaMate.http",
-              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\DiaMate.http",
-              "RelativeToolTip": "DiaMate\\DiaMate.http",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-11-17T19:19:18.914Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\appsettings.json",
-              "RelativeDocumentMoniker": "DiaMate\\appsettings.json",
-              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\appsettings.json",
-              "RelativeToolTip": "DiaMate\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-14T13:33:23.292Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "DiaMate\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "DiaMate\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAI4AAAAAAAAAAAAAAKUAAAA2AAAAAAAAAA==",
+              "Title": "IQrCodeService.cs",
+              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\IServices\\IQrCodeService.cs",
+              "RelativeDocumentMoniker": "DiaMate\\IServices\\IQrCodeService.cs",
+              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\IServices\\IQrCodeService.cs",
+              "RelativeToolTip": "DiaMate\\IServices\\IQrCodeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-14T14:06:11.169Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-04T20:53:56.538Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Program.cs",
-              "RelativeDocumentMoniker": "DiaMate\\Program.cs",
-              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Program.cs",
-              "RelativeToolTip": "DiaMate\\Program.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "Companion.cs",
+              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Data\\models\\Companion.cs",
+              "RelativeDocumentMoniker": "DiaMate\\Data\\models\\Companion.cs",
+              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Data\\models\\Companion.cs",
+              "RelativeToolTip": "DiaMate\\Data\\models\\Companion.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABYAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-14T13:57:29.033Z",
+              "WhenOpened": "2026-02-26T23:09:31.222Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "dtoMedicine.cs",
-              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\dtoModels\\dtoMedicine.cs",
-              "RelativeDocumentMoniker": "DiaMate\\dtoModels\\dtoMedicine.cs",
-              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\dtoModels\\dtoMedicine.cs",
-              "RelativeToolTip": "DiaMate\\dtoModels\\dtoMedicine.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAWAAAAAAAAAA==",
+              "Title": "AppUser.cs",
+              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Data\\models\\AppUser.cs",
+              "RelativeDocumentMoniker": "DiaMate\\Data\\models\\AppUser.cs",
+              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Data\\models\\AppUser.cs",
+              "RelativeToolTip": "DiaMate\\Data\\models\\AppUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T16:19:37.672Z"
+              "WhenOpened": "2025-11-18T14:02:41.288Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LabTestController.cs",
-              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Controllers\\LabTestController.cs",
-              "RelativeDocumentMoniker": "DiaMate\\Controllers\\LabTestController.cs",
-              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Controllers\\LabTestController.cs",
-              "RelativeToolTip": "DiaMate\\Controllers\\LabTestController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAAL8AAAAJAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Program.cs",
+              "RelativeDocumentMoniker": "DiaMate\\Program.cs",
+              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Program.cs",
+              "RelativeToolTip": "DiaMate\\Program.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAACkAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-28T14:45:06.94Z"
+              "WhenOpened": "2025-11-14T13:57:29.033Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MedicineController.cs",
-              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Controllers\\MedicineController.cs",
-              "RelativeDocumentMoniker": "DiaMate\\Controllers\\MedicineController.cs",
-              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Controllers\\MedicineController.cs",
-              "RelativeToolTip": "DiaMate\\Controllers\\MedicineController.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAAADAAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Patient.cs",
+              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Data\\models\\Patient.cs",
+              "RelativeDocumentMoniker": "DiaMate\\Data\\models\\Patient.cs",
+              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Data\\models\\Patient.cs",
+              "RelativeToolTip": "DiaMate\\Data\\models\\Patient.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACEAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T16:47:12.251Z"
+              "WhenOpened": "2025-11-18T12:49:25.868Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "dtoFootUlcerImage.cs",
-              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\dtoModels\\dtoFootUlcerImage.cs",
-              "RelativeDocumentMoniker": "DiaMate\\dtoModels\\dtoFootUlcerImage.cs",
-              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\dtoModels\\dtoFootUlcerImage.cs",
-              "RelativeToolTip": "DiaMate\\dtoModels\\dtoFootUlcerImage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAyAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Person.cs",
+              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Data\\models\\Person.cs",
+              "RelativeDocumentMoniker": "DiaMate\\Data\\models\\Person.cs",
+              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Data\\models\\Person.cs",
+              "RelativeToolTip": "DiaMate\\Data\\models\\Person.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADIAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T22:44:28.579Z"
+              "WhenOpened": "2025-11-14T14:24:17.143Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "dtoBloodGlucoseReading.cs",
-              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\dtoModels\\dtoBloodGlucoseReading.cs",
-              "RelativeDocumentMoniker": "DiaMate\\dtoModels\\dtoBloodGlucoseReading.cs",
-              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\dtoModels\\dtoBloodGlucoseReading.cs",
-              "RelativeToolTip": "DiaMate\\dtoModels\\dtoBloodGlucoseReading.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T22:37:42.248Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "dtoChangePassword.cs",
               "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\dtoModels\\dtoChangePassword.cs",
               "RelativeDocumentMoniker": "DiaMate\\dtoModels\\dtoChangePassword.cs",
@@ -260,95 +274,177 @@
               "RelativeToolTip": "DiaMate\\dtoModels\\dtoChangePassword.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-14T15:44:19.734Z"
+              "WhenOpened": "2025-11-14T15:44:19.734Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "dtoLabTest.cs",
-              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\dtoModels\\dtoLabTest.cs",
-              "RelativeDocumentMoniker": "DiaMate\\dtoModels\\dtoLabTest.cs",
-              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\dtoModels\\dtoLabTest.cs",
-              "RelativeToolTip": "DiaMate\\dtoModels\\dtoLabTest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAARAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "IEmailService.cs",
+              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\IServices\\IEmailService.cs",
+              "RelativeDocumentMoniker": "DiaMate\\IServices\\IEmailService.cs",
+              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\IServices\\IEmailService.cs",
+              "RelativeToolTip": "DiaMate\\IServices\\IEmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-28T14:26:14.041Z"
+              "WhenOpened": "2026-02-05T06:55:04.798Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "dtoLogin.cs",
-              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\dtoModels\\dtoLogin.cs",
-              "RelativeDocumentMoniker": "DiaMate\\dtoModels\\dtoLogin.cs",
-              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\dtoModels\\dtoLogin.cs",
-              "RelativeToolTip": "DiaMate\\dtoModels\\dtoLogin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T12:04:08.552Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "dtoNewUser.cs",
-              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\dtoModels\\dtoNewUser.cs",
-              "RelativeDocumentMoniker": "DiaMate\\dtoModels\\dtoNewUser.cs",
-              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\dtoModels\\dtoNewUser.cs",
-              "RelativeToolTip": "DiaMate\\dtoModels\\dtoNewUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-14T14:35:59.301Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 10,
               "Title": "dtoPatient.cs",
               "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\dtoModels\\dtoPatient.cs",
               "RelativeDocumentMoniker": "DiaMate\\dtoModels\\dtoPatient.cs",
               "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\dtoModels\\dtoPatient.cs",
               "RelativeToolTip": "DiaMate\\dtoModels\\dtoPatient.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAADYAAABdAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACoAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T12:04:12.063Z"
+              "WhenOpened": "2025-11-18T12:04:12.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "dtoNewUser.cs",
+              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\dtoModels\\dtoNewUser.cs",
+              "RelativeDocumentMoniker": "DiaMate\\dtoModels\\dtoNewUser.cs",
+              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\dtoModels\\dtoNewUser.cs",
+              "RelativeToolTip": "DiaMate\\dtoModels\\dtoNewUser.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACwAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T14:35:59.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "DiaMate\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "DiaMate\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAKUAAAAAAAAAAAAAACsAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T14:06:11.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AppointmentController.cs",
+              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Controllers\\AppointmentController.cs",
+              "RelativeDocumentMoniker": "DiaMate\\Controllers\\AppointmentController.cs",
+              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Controllers\\AppointmentController.cs",
+              "RelativeToolTip": "DiaMate\\Controllers\\AppointmentController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T10:18:01.456Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "20260225202321_updatePatientAtt1.cs",
+              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Migrations\\20260225202321_updatePatientAtt1.cs",
+              "RelativeDocumentMoniker": "DiaMate\\Migrations\\20260225202321_updatePatientAtt1.cs",
+              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Migrations\\20260225202321_updatePatientAtt1.cs",
+              "RelativeToolTip": "DiaMate\\Migrations\\20260225202321_updatePatientAtt1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T20:23:21.741Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BloodGlucoseReadingController.cs",
+              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Controllers\\BloodGlucoseReadingController.cs",
+              "RelativeDocumentMoniker": "DiaMate\\Controllers\\BloodGlucoseReadingController.cs",
+              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Controllers\\BloodGlucoseReadingController.cs",
+              "RelativeToolTip": "DiaMate\\Controllers\\BloodGlucoseReadingController.cs",
+              "ViewState": "AgIAAJcAAAAAAAAAAAAAABwAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T22:48:00.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PatientsController.cs",
+              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Controllers\\PatientsController.cs",
+              "RelativeDocumentMoniker": "DiaMate\\Controllers\\PatientsController.cs",
+              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Controllers\\PatientsController.cs",
+              "RelativeToolTip": "DiaMate\\Controllers\\PatientsController.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAAAFQAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T19:47:22.025Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "AppUser.cs",
-              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Data\\models\\AppUser.cs",
-              "RelativeDocumentMoniker": "DiaMate\\Data\\models\\AppUser.cs",
-              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Data\\models\\AppUser.cs",
-              "RelativeToolTip": "DiaMate\\Data\\models\\AppUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "FootUlcerImageController.cs",
+              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Controllers\\FootUlcerImageController.cs",
+              "RelativeDocumentMoniker": "DiaMate\\Controllers\\FootUlcerImageController.cs",
+              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Controllers\\FootUlcerImageController.cs",
+              "RelativeToolTip": "DiaMate\\Controllers\\FootUlcerImageController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAC4AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T14:02:41.288Z"
+              "WhenOpened": "2025-11-21T00:31:52.157Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "BloodGlucoseReading.cs",
-              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Data\\models\\BloodGlucoseReading.cs",
-              "RelativeDocumentMoniker": "DiaMate\\Data\\models\\BloodGlucoseReading.cs",
-              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Data\\models\\BloodGlucoseReading.cs",
-              "RelativeToolTip": "DiaMate\\Data\\models\\BloodGlucoseReading.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAARAAAAAAAAAA==",
+              "Title": "LabTestController.cs",
+              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Controllers\\LabTestController.cs",
+              "RelativeDocumentMoniker": "DiaMate\\Controllers\\LabTestController.cs",
+              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Controllers\\LabTestController.cs",
+              "RelativeToolTip": "DiaMate\\Controllers\\LabTestController.cs",
+              "ViewState": "AgIAAJ0AAAAAAAAAAAAAADUAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T22:25:07.676Z"
+              "WhenOpened": "2025-11-28T14:45:06.94Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "FootUlcerImage.cs",
-              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Data\\models\\FootUlcerImage.cs",
-              "RelativeDocumentMoniker": "DiaMate\\Data\\models\\FootUlcerImage.cs",
-              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Data\\models\\FootUlcerImage.cs",
-              "RelativeToolTip": "DiaMate\\Data\\models\\FootUlcerImage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAArAAAAAAAAAA==",
+              "Title": "MealController.cs",
+              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Controllers\\MealController.cs",
+              "RelativeDocumentMoniker": "DiaMate\\Controllers\\MealController.cs",
+              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Controllers\\MealController.cs",
+              "RelativeToolTip": "DiaMate\\Controllers\\MealController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T15:17:06.246Z"
+              "WhenOpened": "2026-02-05T10:17:41.676Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
+              "Title": "MedicineController.cs",
+              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Controllers\\MedicineController.cs",
+              "RelativeDocumentMoniker": "DiaMate\\Controllers\\MedicineController.cs",
+              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Controllers\\MedicineController.cs",
+              "RelativeToolTip": "DiaMate\\Controllers\\MedicineController.cs",
+              "ViewState": "AgIAAKcAAAAAAAAAAAAAANAAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T16:47:12.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Meal.cs",
+              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Data\\models\\Meal.cs",
+              "RelativeDocumentMoniker": "DiaMate\\Data\\models\\Meal.cs",
+              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Data\\models\\Meal.cs",
+              "RelativeToolTip": "DiaMate\\Data\\models\\Meal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T22:24:41.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "LabTest.cs",
               "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Data\\models\\LabTest.cs",
               "RelativeDocumentMoniker": "DiaMate\\Data\\models\\LabTest.cs",
@@ -356,19 +452,33 @@
               "RelativeToolTip": "DiaMate\\Data\\models\\LabTest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T16:31:51.312Z"
+              "WhenOpened": "2025-12-01T16:31:51.312Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Meal.cs",
-              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Data\\models\\Meal.cs",
-              "RelativeDocumentMoniker": "DiaMate\\Data\\models\\Meal.cs",
-              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Data\\models\\Meal.cs",
-              "RelativeToolTip": "DiaMate\\Data\\models\\Meal.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 23,
+              "Title": "FootUlcerImage.cs",
+              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Data\\models\\FootUlcerImage.cs",
+              "RelativeDocumentMoniker": "DiaMate\\Data\\models\\FootUlcerImage.cs",
+              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Data\\models\\FootUlcerImage.cs",
+              "RelativeToolTip": "DiaMate\\Data\\models\\FootUlcerImage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T22:24:41.755Z"
+              "WhenOpened": "2025-11-18T15:17:06.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "20260225195225_removeName.cs",
+              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Migrations\\20260225195225_removeName.cs",
+              "RelativeDocumentMoniker": "DiaMate\\Migrations\\20260225195225_removeName.cs",
+              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Migrations\\20260225195225_removeName.cs",
+              "RelativeToolTip": "DiaMate\\Migrations\\20260225195225_removeName.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T19:52:25.681Z"
             },
             {
               "$type": "Document",
@@ -380,71 +490,189 @@
               "RelativeToolTip": "DiaMate\\Data\\models\\Medicine.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T22:24:40.184Z"
+              "WhenOpened": "2025-11-20T22:24:40.184Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 19,
               "Title": "Notification.cs",
               "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Data\\models\\Notification.cs",
               "RelativeDocumentMoniker": "DiaMate\\Data\\models\\Notification.cs",
               "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Data\\models\\Notification.cs",
               "RelativeToolTip": "DiaMate\\Data\\models\\Notification.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T14:02:39.542Z"
+              "WhenOpened": "2025-11-18T14:02:39.542Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Person.cs",
-              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Data\\models\\Person.cs",
-              "RelativeDocumentMoniker": "DiaMate\\Data\\models\\Person.cs",
-              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Data\\models\\Person.cs",
-              "RelativeToolTip": "DiaMate\\Data\\models\\Person.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAABEAAAAAAAAAA==",
+              "DocumentIndex": 24,
+              "Title": "BloodGlucoseReading.cs",
+              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Data\\models\\BloodGlucoseReading.cs",
+              "RelativeDocumentMoniker": "DiaMate\\Data\\models\\BloodGlucoseReading.cs",
+              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Data\\models\\BloodGlucoseReading.cs",
+              "RelativeToolTip": "DiaMate\\Data\\models\\BloodGlucoseReading.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-14T14:24:17.143Z"
+              "WhenOpened": "2025-11-20T22:25:07.676Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "Appointment.cs",
               "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Data\\models\\Appointment.cs",
               "RelativeDocumentMoniker": "DiaMate\\Data\\models\\Appointment.cs",
               "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Data\\models\\Appointment.cs",
               "RelativeToolTip": "DiaMate\\Data\\models\\Appointment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T23:07:55.068Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Patient.cs",
-              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Data\\models\\Patient.cs",
-              "RelativeDocumentMoniker": "DiaMate\\Data\\models\\Patient.cs",
-              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Data\\models\\Patient.cs",
-              "RelativeToolTip": "DiaMate\\Data\\models\\Patient.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T12:49:25.868Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "FootUlcerImageController.cs",
-              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Controllers\\FootUlcerImageController.cs",
-              "RelativeDocumentMoniker": "DiaMate\\Controllers\\FootUlcerImageController.cs",
-              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Controllers\\FootUlcerImageController.cs",
-              "RelativeToolTip": "DiaMate\\Controllers\\FootUlcerImageController.cs",
-              "ViewState": "AgIAAKQAAAAAAAAAAAAwwLcAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T00:31:52.157Z"
+              "WhenOpened": "2025-11-20T23:07:55.068Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 26,
+              "Title": "dtoFootUlcerImage.cs",
+              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\dtoModels\\dtoFootUlcerImage.cs",
+              "RelativeDocumentMoniker": "DiaMate\\dtoModels\\dtoFootUlcerImage.cs",
+              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\dtoModels\\dtoFootUlcerImage.cs",
+              "RelativeToolTip": "DiaMate\\dtoModels\\dtoFootUlcerImage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T22:44:28.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "20260225194447_updatePatientAtt.cs",
+              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Migrations\\20260225194447_updatePatientAtt.cs",
+              "RelativeDocumentMoniker": "DiaMate\\Migrations\\20260225194447_updatePatientAtt.cs",
+              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Migrations\\20260225194447_updatePatientAtt.cs",
+              "RelativeToolTip": "DiaMate\\Migrations\\20260225194447_updatePatientAtt.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T19:44:48.206Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "dtoMeal.cs",
+              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\dtoModels\\dtoMeal.cs",
+              "RelativeDocumentMoniker": "DiaMate\\dtoModels\\dtoMeal.cs",
+              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\dtoModels\\dtoMeal.cs",
+              "RelativeToolTip": "DiaMate\\dtoModels\\dtoMeal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T10:13:26.854Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "dtoAppointment.cs",
+              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\dtoModels\\dtoAppointment.cs",
+              "RelativeDocumentMoniker": "DiaMate\\dtoModels\\dtoAppointment.cs",
+              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\dtoModels\\dtoAppointment.cs",
+              "RelativeToolTip": "DiaMate\\dtoModels\\dtoAppointment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T10:14:44.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "dtoLabTest.cs",
+              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\dtoModels\\dtoLabTest.cs",
+              "RelativeDocumentMoniker": "DiaMate\\dtoModels\\dtoLabTest.cs",
+              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\dtoModels\\dtoLabTest.cs",
+              "RelativeToolTip": "DiaMate\\dtoModels\\dtoLabTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T14:26:14.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "DiaMate\\Services\\EmailService.cs",
+              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Services\\EmailService.cs",
+              "RelativeToolTip": "DiaMate\\Services\\EmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T06:56:09.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\appsettings.json",
+              "RelativeDocumentMoniker": "DiaMate\\appsettings.json",
+              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\appsettings.json",
+              "RelativeToolTip": "DiaMate\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-14T13:33:23.292Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "DiaMate.http",
+              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\DiaMate.http",
+              "RelativeDocumentMoniker": "DiaMate\\DiaMate.http",
+              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\DiaMate.http",
+              "RelativeToolTip": "DiaMate\\DiaMate.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-11-17T19:19:18.914Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "dtoMedicine.cs",
+              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\dtoModels\\dtoMedicine.cs",
+              "RelativeDocumentMoniker": "DiaMate\\dtoModels\\dtoMedicine.cs",
+              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\dtoModels\\dtoMedicine.cs",
+              "RelativeToolTip": "DiaMate\\dtoModels\\dtoMedicine.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T16:19:37.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "dtoBloodGlucoseReading.cs",
+              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\dtoModels\\dtoBloodGlucoseReading.cs",
+              "RelativeDocumentMoniker": "DiaMate\\dtoModels\\dtoBloodGlucoseReading.cs",
+              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\dtoModels\\dtoBloodGlucoseReading.cs",
+              "RelativeToolTip": "DiaMate\\dtoModels\\dtoBloodGlucoseReading.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T22:37:42.248Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "dtoLogin.cs",
+              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\dtoModels\\dtoLogin.cs",
+              "RelativeDocumentMoniker": "DiaMate\\dtoModels\\dtoLogin.cs",
+              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\dtoModels\\dtoLogin.cs",
+              "RelativeToolTip": "DiaMate\\dtoModels\\dtoLogin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T12:04:08.552Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "DiaMate\\Data\\AppDbContext.cs",
@@ -455,16 +683,8 @@
               "WhenOpened": "2025-11-20T22:35:51.103Z"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "PatientsController.cs",
-              "DocumentMoniker": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Controllers\\PatientsController.cs",
-              "RelativeDocumentMoniker": "DiaMate\\Controllers\\PatientsController.cs",
-              "ToolTip": "C:\\Users\\yoseef eprahem\\source\\repos\\DiaMate\\DiaMate\\Controllers\\PatientsController.cs",
-              "RelativeToolTip": "DiaMate\\Controllers\\PatientsController.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAABsAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T19:47:22.025Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             }
           ]
         }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DiaMate")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6406ea362d33083527ae678a08337b3dc592832f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d4eec275f57e51902580e2292a75f89afa9c63c6")]
 [assembly: System.Reflection.AssemblyProductAttribute("DiaMate")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DiaMate")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,6 +1,7 @@
 using DiaMate.Data;
 using DiaMate.Data.models;
 using DiaMate.Extentions;
+using DiaMate.IServices;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
@@ -24,7 +25,7 @@ builder.Services.AddCors(options =>
         policy =>
         {
             policy
-                .WithOrigins("http://localhost:5173") // ??? allowed ????? ???????
+                .WithOrigins("http://localhost:3000") // ??? allowed ????? ???????
                 .AllowAnyHeader()
                 .AllowAnyMethod()
                 // .AllowCredentials() // ???? ?????? ?? ?????? cookies ?? credentials
@@ -36,7 +37,9 @@ builder.Services.AddCors(options =>
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+// add services
+builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<IQrCodeService, QrCodeService>();
 // Authentication (JWT) - ????? AddCustomJwtAuth ???? Authentication/Authorization services
 builder.Services.AddCustomJwtAuth(builder.Configuration);
 
