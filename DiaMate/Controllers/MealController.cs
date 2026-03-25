@@ -93,7 +93,7 @@ namespace DiaMate.Controllers
             return Unauthorized();
         }
 
-        public async Task<IActionResult> AddNewMedicine(dtoMeal dtoMeal)
+        public async Task<IActionResult> AddNewMeal(dtoMeal dtoMeal)
         {
             if (int.Parse(User.FindFirst("PatientId")?.Value) == dtoMeal.PatientId)
             {
