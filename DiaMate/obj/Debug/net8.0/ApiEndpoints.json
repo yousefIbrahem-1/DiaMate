@@ -333,6 +333,54 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "DiaMate.Controllers.MealController",
+    "Method": "AddNewMedicine",
+    "RelativePath": "api/Meal",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dtoMeal",
+        "Type": "DiaMate.dtoModels.dtoMeal",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiaMate.Controllers.MealController",
+    "Method": "GetAllMealsForPatient",
+    "RelativePath": "api/Meal/GetAllMealsForPatient/{PatientId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PatientId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiaMate.Controllers.MealController",
+    "Method": "GetLastMealForPatient",
+    "RelativePath": "api/Meal/GetLastMealForPatient/{PatientId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PatientId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "DiaMate.Controllers.MedicineController",
     "Method": "AddNewMedicine",
     "RelativePath": "api/Medicine/AddNewMedicine",
@@ -350,8 +398,8 @@
   },
   {
     "ContainingType": "DiaMate.Controllers.MedicineController",
-    "Method": "GetAllMedicineForPatient",
-    "RelativePath": "api/Medicine/GetAllMedicineForPatient/{PatientId}",
+    "Method": "GetAllMedicinesForPatient",
+    "RelativePath": "api/Medicine/GetAllMedicinesForPatient/{PatientId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
