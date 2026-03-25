@@ -13,13 +13,24 @@ namespace DiaMate.Data.models
         [Required, ForeignKey(nameof(PatientId))]
         public Patient Patient { get; set; }
 
-        
+        [Required]
+        public string Name { get; set; }
+
+
         public DateTime Read_date { get; set; }= DateTime.Now;
 
 
-        [Column(TypeName = "decimal(6,2)")]
+        [Required,Column(TypeName = "decimal(6,2)")]
         public decimal Calories { get; set; }
 
+        [Required]
+        public decimal protein { get; set; }
+
+        [Required]
+        public decimal carbs { get; set; }
+
+        [Required]
+        public decimal fats { get; set; }
 
         public string? Notes { get; set; }
 

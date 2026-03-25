@@ -98,18 +98,6 @@
         }
       }
     },
-    "/api/Account": {
-      "get": {
-        "tags": [
-          "Account"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/BloodGlucoseReading/GetAllReadingsForPatient/{id}": {
       "get": {
         "tags": [
@@ -961,6 +949,7 @@
       "dtoNewUser": {
         "required": [
           "dateOfBirth",
+          "diabetesType",
           "email",
           "firstName",
           "gender",
@@ -1028,6 +1017,8 @@
             "format": "date-time"
           },
           "diabetesType": {
+            "maximum": 5,
+            "minimum": 1,
             "type": "integer",
             "format": "int32"
           },
@@ -1053,6 +1044,7 @@
       "dtoPatient": {
         "required": [
           "dateOfBirth",
+          "diabetesType",
           "email",
           "firstName",
           "gender",
@@ -1110,6 +1102,8 @@
             "format": "date-time"
           },
           "diabetesType": {
+            "maximum": 5,
+            "minimum": 1,
             "type": "integer",
             "format": "int32"
           },

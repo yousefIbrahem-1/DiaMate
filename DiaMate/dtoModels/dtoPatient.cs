@@ -1,5 +1,5 @@
 ﻿using DiaMate.Data.models;
-using DiaMate.Migrations;
+//using DiaMate.Migrations;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -39,10 +39,11 @@ namespace DiaMate.dtoModels
 
         public byte[]? ProfileImage { set; get; }=null;
 
-        [Required, Range(1, 5,
-       ErrorMessage = "Value for {0} must be between {1} and {2}.")]
+       
         public DateTime DateOfDiagnosis { get; set; }
 
+        [Required, Range(1, 5,
+      ErrorMessage = "Value for {0} must be between {1} and {2}.")]
         public short DiabetesType { get; set; } = (short)enDiabetesType.Type1;
 
         [Required, Range(40, 200,

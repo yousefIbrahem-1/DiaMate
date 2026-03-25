@@ -357,6 +357,9 @@ namespace DiaMate.Migrations
                     b.Property<int>("PersonId")
                         .HasColumnType("int");
 
+                    b.Property<byte[]>("QrCodeBase64")
+                        .HasColumnType("varbinary(max)");
+
                     b.Property<double>("Weight")
                         .HasColumnType("float");
 

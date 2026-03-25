@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DiaMate.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260225195225_removeName")]
-    partial class removeName
+    [Migration("20260313185246_newDB")]
+    partial class newDB
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -345,6 +345,9 @@ namespace DiaMate.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PatientId"));
 
+                    b.Property<DateTime>("DateOfDiagnosis")
+                        .HasColumnType("datetime2");
+
                     b.Property<short>("DiabetesType")
                         .HasColumnType("smallint");
 
@@ -356,6 +359,9 @@ namespace DiaMate.Migrations
 
                     b.Property<int>("PersonId")
                         .HasColumnType("int");
+
+                    b.Property<byte[]>("QrCodeBase64")
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<double>("Weight")
                         .HasColumnType("float");

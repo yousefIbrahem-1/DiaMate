@@ -1,16 +1,6 @@
 [
   {
     "ContainingType": "DiaMate.Controllers.AccountController",
-    "Method": "Get",
-    "RelativePath": "api/Account",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "DiaMate.Controllers.AccountController",
     "Method": "ChangePassword",
     "RelativePath": "api/Account/ChangePassword",
     "HttpMethod": "PATCH",

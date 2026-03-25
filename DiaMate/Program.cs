@@ -18,6 +18,7 @@ builder.Services.AddDbContext<AppDbContext>(op =>
 builder.Services.AddIdentity<AppUser, IdentityRole>()
     .AddEntityFrameworkStores<AppDbContext>();
 
+
 // CORS policy - ????? ????
 builder.Services.AddCors(options =>
 {
@@ -40,6 +41,11 @@ builder.Services.AddSwaggerGen();
 // add services
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<IQrCodeService, QrCodeService>();
+
+builder.Services.Configure<IdentityOptions>(options =>
+{
+    options.SignIn.RequireConfirmedEmail = true;
+});
 // Authentication (JWT) - ????? AddCustomJwtAuth ???? Authentication/Authorization services
 builder.Services.AddCustomJwtAuth(builder.Configuration);
 
@@ -58,6 +64,9 @@ app.UseAuthentication();   // ???? ?? ???? JWT/Identity
 app.UseAuthorization();
 
 app.MapControllers();
+
+
+app.Urls.Add("http://0.0.0.0:8080");
 
 app.Run();
 

@@ -164,7 +164,6 @@ namespace DiaMate.Controllers
         }
 
 
-        [HttpGet]
-        public IActionResult Get() => Ok("API works");
+      
     }
 }

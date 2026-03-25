@@ -21,7 +21,7 @@ namespace DiaMate.Controllers
         private readonly AppDbContext _db;
 
         [HttpGet("[action]/{PatientId}")]
-        public async Task<IActionResult> GetAllMedicineForPatient(int PatientId)
+        public async Task<IActionResult> GetAllMedicinesForPatient(int PatientId)
         {
             if (int.Parse(User.FindFirst("PatientId")?.Value) == PatientId)
             {
