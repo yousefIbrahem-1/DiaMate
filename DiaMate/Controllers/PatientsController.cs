@@ -33,7 +33,7 @@ namespace DiaMate.Controllers
                 if (Patient != null)
                 {
                     dtoPatient dtoPatient = new dtoPatient()
-                    { 
+                    {
                         FirstName = Patient.Person.FirstName,
                         LastName = Patient.Person.LastName,
                         Gender = Patient.Person.Gender,
@@ -44,7 +44,10 @@ namespace DiaMate.Controllers
                         DateOfBirth = Patient.Person.DateOfBirth,
                         ProfileImage = Patient.Person.ProfileImage,
 
+                        Height = Patient.Height,
                         Weight = Patient.Weight,
+                        DateOfDiagnosis = Patient.DateOfDiagnosis,
+                        DiabetesType = Patient.DiabetesType,
                         Notes = Patient.Notes
                     };
                     //var BloodGlucoseReading = await _db.BloodGlucoseReadings.Where(B => B.PatientId == id).ToListAsync();
@@ -63,7 +66,7 @@ namespace DiaMate.Controllers
                 }
                 else
                 {
-                    return NotFound("this patient not exist");
+                    return NotFound("message: this patient not exist");
                 }
             }
             return Unauthorized();
@@ -80,11 +83,6 @@ namespace DiaMate.Controllers
                     var Patient = await _db.Patients.Include(p => p.Person).SingleOrDefaultAsync(p => p.PatientId == id);
                     if (Patient != null)
                     {
-                        Patient.DateOfDiagnosis = dtoPatient.DateOfDiagnosis;
-                        Patient.DiabetesType = dtoPatient.DiabetesType;
-                        Patient.Height = dtoPatient.Height;
-                        Patient.Weight = dtoPatient.Weight;
-                        Patient.Notes = dtoPatient.Notes;
 
                         Patient.Person.FirstName = dtoPatient.FirstName;
                         Patient.Person.LastName = dtoPatient.LastName;
@@ -96,6 +94,12 @@ namespace DiaMate.Controllers
                         Patient.Person.HomePhone = dtoPatient.HomePhone;
                         Patient.Person.ProfileImage = dtoPatient.ProfileImage;
 
+                        Patient.DateOfDiagnosis = dtoPatient.DateOfDiagnosis;
+                        Patient.DiabetesType = dtoPatient.DiabetesType;
+                        Patient.Height = dtoPatient.Height;
+                        Patient.Weight = dtoPatient.Weight;
+                        Patient.Notes = dtoPatient.Notes;
+
                         _db.Patients.Update(Patient);
                         await _db.SaveChangesAsync();
                         return Ok(dtoPatient);
@@ -103,13 +107,13 @@ namespace DiaMate.Controllers
                     }
                     else
                     {
-                        return NotFound("this Patient not exist");
+                        return NotFound("message: this Patient not exist");
                     }
 
 
 
                 }
-                return BadRequest(ModelState);
+                return BadRequest($"message: {ModelState}");
             }
             return Unauthorized();
         }

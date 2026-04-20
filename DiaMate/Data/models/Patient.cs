@@ -9,17 +9,18 @@ namespace DiaMate.Data.models
         Type2 = 2,
         Gestational = 3,
         Prediabetes = 4,
-        Other = 5
     }
     public class Patient
     {
         [Key]
         public int PatientId { get; set; }
 
+         [Required]
+        [DateRangeWithAge(0, 70)]
         public DateTime DateOfDiagnosis { get; set; }
 
 
-        [Required, Range(1, 5,
+        [Required, Range(1, 4,
         ErrorMessage = "Value for {0} must be between {1} and {2}.")]
         public short DiabetesType { get; set; } 
 
@@ -29,7 +30,7 @@ namespace DiaMate.Data.models
 
         [Required, Range(100, 230,
        ErrorMessage = "Value for {0} must be between {1} and {2}.")]
-        public double Height { get; set; } = 150.00;
+        public double Height { get; set; } 
 
         public byte[]? QrCodeBase64 { get; set; }
 

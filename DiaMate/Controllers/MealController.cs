@@ -1,6 +1,8 @@
 ﻿using DiaMate.Data;
 using DiaMate.Data.models;
 using DiaMate.dtoModels;
+using Microsoft.AspNetCore.Authorization;
+
 
 //using DiaMate.Migrations;
 using Microsoft.AspNetCore.Http;
@@ -11,6 +13,7 @@ namespace DiaMate.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class MealController : ControllerBase
     {
         public MealController(AppDbContext dp)
@@ -50,7 +53,7 @@ namespace DiaMate.Controllers
                 }
                 else
                 {
-                    return NotFound("this patient is not exist");
+                    return NotFound("message: this patient is not exist");
                 }
             }
             return Unauthorized();
@@ -87,7 +90,7 @@ namespace DiaMate.Controllers
                 }
                 else
                 {
-                    return NotFound("this patient is not exist");
+                    return NotFound("message: this patient is not exist");
                 }
             }
             return Unauthorized();
@@ -120,10 +123,10 @@ namespace DiaMate.Controllers
                     }
                     else
                     {
-                        return NotFound("Patient is not exist");
+                        return NotFound("message: Patient is not exist");
                     }
                 }
-                return BadRequest(ModelState);
+                return BadRequest($"message: {ModelState}");
             }
             return Unauthorized();
         }

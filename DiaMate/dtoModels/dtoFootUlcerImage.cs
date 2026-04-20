@@ -20,8 +20,7 @@ namespace DiaMate.dtoModels
 
         
         [Required,Column(TypeName = "decimal(5,2)")]
-        public decimal? AIConfidence { get; set; } = null;
-
+        public decimal? AIConfidence { get; set; } 
         [MaxLength(500)]
         public string? Notes { get; set; } = null;
     }

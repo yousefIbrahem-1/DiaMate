@@ -14,37 +14,38 @@ namespace DiaMate.dtoModels
 
 
         [MaxLength(50)]
-        public string? LastName { set; get; } = null;
+        public string? LastName { set; get; }
 
 
-        [Required, Range(typeof(DateTime), "1/1/1900", "1/1/2010",
-       ErrorMessage = "Value for {0} must be between {1} and {2}")]
+        [Required]
+        [DateRangeWithAge(15, 100)]
         public DateTime DateOfBirth { set; get; }
 
 
         [Required, Range(0, 1,
        ErrorMessage = "Value for {0} must be between {1} and {2}.")]
-        public short Gender { set; get; } = (short)enGender.Male;
+        public short Gender { set; get; } 
 
-        public string? Address { set; get; } = null;
+        public string? Address { set; get; }
 
         [Required, MinLength(11), MaxLength(11)]
         public string Phone { set; get; }
 
         [MaxLength(11)]
-        public string? HomePhone { set; get; } = null;
+        public string? HomePhone { set; get; } 
 
         [Required]
         public string Email { set; get; }
 
-        public byte[]? ProfileImage { set; get; }=null;
+        public byte[]? ProfileImage { set; get; }
 
-       
+        [Required]
+        [DateRangeWithAge(0, 70)]
         public DateTime DateOfDiagnosis { get; set; }
 
-        [Required, Range(1, 5,
+        [Required, Range(1, 4,
       ErrorMessage = "Value for {0} must be between {1} and {2}.")]
-        public short DiabetesType { get; set; } = (short)enDiabetesType.Type1;
+        public short DiabetesType { get; set; } 
 
         [Required, Range(40, 200,
         ErrorMessage = "Value for {0} must be between {1} and {2}.")]
@@ -52,9 +53,9 @@ namespace DiaMate.dtoModels
 
         [Required, Range(100, 230,
        ErrorMessage = "Value for {0} must be between {1} and {2}.")]
-        public double Height { get; set; } = 150.00;
+        public double Height { get; set; } 
 
-        public string? Notes { get; set; } = null;
+        public string? Notes { get; set; } 
 
        //public ICollection<dtoBloodGlucoseReading> bloodGlucoseReadings = new List<dtoBloodGlucoseReading>();
        //public ICollection<dtoFootUlcerImage> footUlcerImages=new List<dtoFootUlcerImage>();

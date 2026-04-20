@@ -11,19 +11,21 @@ namespace DiaMate.dtoModels
         [Required]
         public int PatientId { get; set; }
 
-        [MaxLength(150)]
+        [Required,MaxLength(150)]
         public string TestName { get; set; }
 
-        [MaxLength(500)]
+        [Required]
         public double Result_value { get; set; }
 
-        [MaxLength(50)]
+        [Required,MaxLength(50)]
         public string NormalRange { get; set; }
 
-        public string? Notes { get; set; }
 
         public DateTime TestDate { get; set; } = DateTime.Now;
-        [Required]
-        public byte[] Report_Image { get; set; }
+
+        
+        public byte[]? Report_Image { get; set; }
+
+        public string? Notes { get; set; }
     }
 }

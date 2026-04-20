@@ -1,6 +1,16 @@
 [
   {
     "ContainingType": "DiaMate.Controllers.AccountController",
+    "Method": "ApiWorks",
+    "RelativePath": "api/Account/ApiWorks",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiaMate.Controllers.AccountController",
     "Method": "ChangePassword",
     "RelativePath": "api/Account/ChangePassword",
     "HttpMethod": "PATCH",
@@ -138,6 +148,32 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiaMate.Controllers.FoodController",
+    "Method": "GetAllFoodsName",
+    "RelativePath": "api/Food/GetAllFoodsName",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiaMate.Controllers.FoodController",
+    "Method": "GetFoodByName",
+    "RelativePath": "api/Food/GetFoodByName",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -334,9 +370,9 @@
   },
   {
     "ContainingType": "DiaMate.Controllers.MealController",
-    "Method": "AddNewMedicine",
-    "RelativePath": "api/Meal",
-    "HttpMethod": "",
+    "Method": "AddNewMeal",
+    "RelativePath": "api/Meal/AddNewMeal",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [

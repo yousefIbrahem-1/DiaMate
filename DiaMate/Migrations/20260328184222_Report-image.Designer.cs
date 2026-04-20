@@ -4,6 +4,7 @@ using DiaMate.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DiaMate.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260328184222_Report-image")]
+    partial class Reportimage
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -151,41 +154,6 @@ namespace DiaMate.Migrations
                     b.ToTable("BloodGlucoseReadings");
                 });
 
-            modelBuilder.Entity("DiaMate.Data.models.Food", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<double>("CaloriesPer100g")
-                        .HasColumnType("float");
-
-                    b.Property<double>("Carbs_G")
-                        .HasColumnType("float");
-
-                    b.Property<double>("Fat_G")
-                        .HasColumnType("float");
-
-                    b.Property<double>("Fiber_G")
-                        .HasColumnType("float");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<double>("Protein_G")
-                        .HasColumnType("float");
-
-                    b.Property<double>("Sugar_G")
-                        .HasColumnType("float");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Foods");
-                });
-
             modelBuilder.Entity("DiaMate.Data.models.FootUlcerImage", b =>
                 {
                     b.Property<int>("ImageId")
@@ -246,6 +214,7 @@ namespace DiaMate.Migrations
                         .HasColumnType("varbinary(max)");
 
                     b.Property<double>("Result_value")
+                        .HasMaxLength(500)
                         .HasColumnType("float");
 
                     b.Property<DateTime>("TestDate")

@@ -17,7 +17,7 @@ namespace DiaMate.Controllers
     [ApiController]
     public class AccountController : ControllerBase
     {
-        public AccountController(UserManager<AppUser> userManager, IConfiguration configuration,AppDbContext db)
+        public AccountController(UserManager<AppUser> userManager, IConfiguration configuration, AppDbContext db)
         {
             _userManager = userManager;
             _configuration = configuration;
@@ -27,23 +27,23 @@ namespace DiaMate.Controllers
         private readonly UserManager<AppUser> _userManager;
         private readonly IConfiguration _configuration;
 
-      
+
 
         [HttpPost("[action]")]
         public async Task<IActionResult> RegisterNewUser(dtoNewUser user)
         {
-           
+
             if (ModelState.IsValid)
             {
-               
+
                 var appUser = new AppUser()
                 {
                     UserName = user.UserName,
                     Patient = new Patient
                     {
-                        DateOfDiagnosis =user.DateOfDiagnosis,
+                        DateOfDiagnosis = user.DateOfDiagnosis,
                         DiabetesType = user.DiabetesType,
-                        Height =user.Height,
+                        Height = user.Height,
                         Weight = user.Weight,
                         Notes = user.Notes,
                         Person = new Person
@@ -60,15 +60,15 @@ namespace DiaMate.Controllers
                         }
 
                     }
-                    
+
 
                 };
                 IdentityResult result = await _userManager.CreateAsync(appUser, user.Password);
-             
+
                 if (result.Succeeded)
                 {
-                  
-                    return Ok("message:now you have account");
+
+                    return Ok("message: now you have account");
                 }
                 else
                 {
@@ -79,7 +79,7 @@ namespace DiaMate.Controllers
                     }
                 }
             }
-            return BadRequest("message: "+ModelState);
+            return BadRequest($"message: {ModelState}");
 
         }
 
@@ -91,7 +91,7 @@ namespace DiaMate.Controllers
                 AppUser? user = await _userManager.FindByNameAsync(login.UserName);
                 if (user != null)
                 {
-                   
+
                     if (await _userManager.CheckPasswordAsync(user, login.Password))
                     {
                         var claims = new List<Claim>();
@@ -125,7 +125,7 @@ namespace DiaMate.Controllers
                     }
                     else
                     {
-                        return Unauthorized("Password is invalid");
+                        return Unauthorized("message: Password is invalid");
                     }
                 }
                 else
@@ -133,7 +133,7 @@ namespace DiaMate.Controllers
                     ModelState.AddModelError("", "username is invalid");
                 }
             }
-            return BadRequest(ModelState);
+            return BadRequest($"message: {ModelState}");
         }
 
         [HttpPatch("[action]")]
@@ -146,7 +146,7 @@ namespace DiaMate.Controllers
             // get logged in user from token
             var user = await _userManager.FindByNameAsync(User.Identity.Name);
             if (user == null)
-                return Unauthorized("User not found");
+                return Unauthorized("message: User not found");
 
             var result = await _userManager.ChangePasswordAsync(
                 user,
@@ -156,14 +156,17 @@ namespace DiaMate.Controllers
 
             if (!result.Succeeded)
             {
-                
+
                 return BadRequest(result.Errors);
             }
 
-            return Ok("Password changed successfully");
+            return Ok("message: Password changed successfully");
         }
+        [HttpGet("[action]")]
+        public async Task<IActionResult> ApiWorks()
+        {
 
-
-      
+            return Ok("message: Api Works");
+        }
     }
 }

@@ -4,11 +4,8 @@ using DiaMate.Extentions;
 using DiaMate.IServices;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
 
 // Database & Identity
 builder.Services.AddDbContext<AppDbContext>(op =>
@@ -18,27 +15,23 @@ builder.Services.AddDbContext<AppDbContext>(op =>
 builder.Services.AddIdentity<AppUser, IdentityRole>()
     .AddEntityFrameworkStores<AppDbContext>();
 
-
-// CORS policy - ????? ????
+// UPDATED CORS: Now allows any local origin (like Vite's 5173 or React's 3000)
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: "AllowLocalDev",
         policy =>
         {
             policy
-                .WithOrigins("http://localhost:3000") // ??? allowed ????? ???????
+                .SetIsOriginAllowed(origin => new Uri(origin).Host == "localhost")
                 .AllowAnyHeader()
-                .AllowAnyMethod()
-                // .AllowCredentials() // ???? ?????? ?? ?????? cookies ?? credentials
-                ;
+                .AllowAnyMethod();
         });
 });
 
-// Controllers, Swagger
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-// add services
+
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<IQrCodeService, QrCodeService>();
 
@@ -46,27 +39,27 @@ builder.Services.Configure<IdentityOptions>(options =>
 {
     options.SignIn.RequireConfirmedEmail = true;
 });
-// Authentication (JWT) - ????? AddCustomJwtAuth ???? Authentication/Authorization services
+
 builder.Services.AddCustomJwtAuth(builder.Configuration);
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Enable Swagger for all environments in Docker so the developer can see it
 app.UseSwagger();
 app.UseSwaggerUI();
 
-app.UseHttpsRedirection();
+// Commented out to prevent "Connection Refused" issues in local Docker dev
+// app.UseHttpsRedirection(); 
 
-// IMPORTANT: UseCors must come BEFORE authentication/authorization so OPTIONS doesn't get blocked
 app.UseCors("AllowLocalDev");
 
-app.UseAuthentication();   // ???? ?? ???? JWT/Identity
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
 
 
-app.Urls.Add("http://0.0.0.0:8080");
+// Forces the app to listen on the standard Docker port
+app.Urls.Add("http://0.0.0.0:80");
 
 app.Run();
-

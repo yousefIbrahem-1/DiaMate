@@ -17,7 +17,7 @@ namespace DiaMate.Data.models
         [Required,MaxLength(150)]
         public string TestName { get; set; }
 
-        [Required, MaxLength(500)]
+        [Required]
         public double Result_value { get; set; }
 
         [Required, MaxLength(50)]
@@ -25,8 +25,8 @@ namespace DiaMate.Data.models
 
         public DateTime TestDate { get; set; }= DateTime.Now;
 
-        [Required]
-        public byte[] Report_Image { get; set; }
+
+        public byte[]? Report_Image { get; set; } = null;
 
         public string? Notes { get; set; }
     }

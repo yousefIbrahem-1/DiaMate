@@ -44,7 +44,7 @@ namespace DiaMate.Controllers
 
                     return Ok(dtoBloodGlucoseReadings);
                 }
-                return NotFound("this patient is not exist");
+                return NotFound("message: this patient is not exist");
             }
             return Unauthorized();
         }
@@ -77,7 +77,7 @@ namespace DiaMate.Controllers
 
                     return Ok(dtoBloodGlucoseReading);
                 }
-                return NotFound("this patient is not exist");
+                return NotFound("message: this patient is not exist");
             }
             return Unauthorized();
         }
@@ -113,7 +113,7 @@ namespace DiaMate.Controllers
 
                    return Ok(dtoBloodGlucoseReadings);
                 }
-                return NotFound("this patient is not exist");
+                return NotFound("message: this patient is not exist");
             }
             return Unauthorized();
         }
@@ -148,7 +148,7 @@ namespace DiaMate.Controllers
 
                     return Ok(dtoBloodGlucoseReadings);
                 }
-                return NotFound("this patient is not exist");
+                return NotFound("message: this patient is not exist");
             }
             return Unauthorized();
         }
@@ -178,10 +178,10 @@ namespace DiaMate.Controllers
                     }
                     else
                     {
-                        return NotFound("Patient is not exist");
+                        return NotFound("message: Patient is not exist");
                     }
                 }
-                return BadRequest(ModelState);
+                return BadRequest($"message: {ModelState}");
             }
             return Unauthorized();
         }

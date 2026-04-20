@@ -17,7 +17,7 @@ namespace DiaMate.dtoModels
 
         [Required, Range(0, 3,
          ErrorMessage = "Value for {0} must be between {1} and {2}.")]
-        public short MeasurementType { get; set; } = (short)enMeasurementType.Random;
+        public short MeasurementType { get; set; }
 
         public string? Notes { get; set; } = null;
     }

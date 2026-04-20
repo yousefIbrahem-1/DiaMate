@@ -98,6 +98,18 @@
         }
       }
     },
+    "/api/Account/ApiWorks": {
+      "get": {
+        "tags": [
+          "Account"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/BloodGlucoseReading/GetAllReadingsForPatient/{id}": {
       "get": {
         "tags": [
@@ -238,6 +250,39 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Food/GetAllFoodsName": {
+      "get": {
+        "tags": [
+          "Food"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Food/GetFoodByName": {
+      "get": {
+        "tags": [
+          "Food"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -539,7 +584,84 @@
         }
       }
     },
-    "/api/Medicine/GetAllMedicineForPatient/{PatientId}": {
+    "/api/Meal/GetAllMealsForPatient/{PatientId}": {
+      "get": {
+        "tags": [
+          "Meal"
+        ],
+        "parameters": [
+          {
+            "name": "PatientId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Meal/GetLastMealForPatient/{PatientId}": {
+      "get": {
+        "tags": [
+          "Meal"
+        ],
+        "parameters": [
+          {
+            "name": "PatientId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Meal/AddNewMeal": {
+      "post": {
+        "tags": [
+          "Meal"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/dtoMeal"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/dtoMeal"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/dtoMeal"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Medicine/GetAllMedicinesForPatient/{PatientId}": {
       "get": {
         "tags": [
           "Medicine"
@@ -845,8 +967,10 @@
       },
       "dtoLabTest": {
         "required": [
+          "normalRange",
           "patientId",
-          "report_Image"
+          "result_value",
+          "testName"
         ],
         "type": "object",
         "properties": {
@@ -856,22 +980,17 @@
           },
           "testName": {
             "maxLength": 150,
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
           },
           "result_value": {
-            "maxLength": 500,
             "type": "number",
             "format": "double"
           },
           "normalRange": {
             "maxLength": 50,
-            "type": "string",
-            "nullable": true
-          },
-          "notes": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
           },
           "testDate": {
             "type": "string",
@@ -879,7 +998,12 @@
           },
           "report_Image": {
             "type": "string",
-            "format": "byte"
+            "format": "byte",
+            "nullable": true
+          },
+          "notes": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -898,6 +1022,52 @@
           "password": {
             "minLength": 1,
             "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "dtoMeal": {
+        "required": [
+          "calories",
+          "carbs",
+          "fats",
+          "name",
+          "patientId",
+          "protein"
+        ],
+        "type": "object",
+        "properties": {
+          "patientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "read_date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "calories": {
+            "type": "number",
+            "format": "double"
+          },
+          "protein": {
+            "type": "number",
+            "format": "double"
+          },
+          "carbs": {
+            "type": "number",
+            "format": "double"
+          },
+          "fats": {
+            "type": "number",
+            "format": "double"
+          },
+          "notes": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -949,6 +1119,7 @@
       "dtoNewUser": {
         "required": [
           "dateOfBirth",
+          "dateOfDiagnosis",
           "diabetesType",
           "email",
           "firstName",
@@ -1017,7 +1188,7 @@
             "format": "date-time"
           },
           "diabetesType": {
-            "maximum": 5,
+            "maximum": 4,
             "minimum": 1,
             "type": "integer",
             "format": "int32"
@@ -1044,6 +1215,7 @@
       "dtoPatient": {
         "required": [
           "dateOfBirth",
+          "dateOfDiagnosis",
           "diabetesType",
           "email",
           "firstName",
@@ -1102,7 +1274,7 @@
             "format": "date-time"
           },
           "diabetesType": {
-            "maximum": 5,
+            "maximum": 4,
             "minimum": 1,
             "type": "integer",
             "format": "int32"

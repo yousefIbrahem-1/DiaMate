@@ -24,8 +24,8 @@ namespace DiaMate.Data.models
             get { return FirstName + " " + LastName; }
 
         }
-        [Required,Range(typeof(DateTime), "1/1/1900", "1/1/2010",
-        ErrorMessage = "Value for {0} must be between {1} and {2}")]
+        [Required]
+        [DateRangeWithAge(15, 100)]
         public DateTime DateOfBirth { set; get; }
 
         public int Age
