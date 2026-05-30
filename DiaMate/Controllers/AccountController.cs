@@ -2,6 +2,7 @@
 using DiaMate.Data.models;
 using DiaMate.dtoModels;
 using Microsoft.AspNetCore.Authorization;
+using DiaMate.IServices;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -17,18 +18,25 @@ namespace DiaMate.Controllers
     [ApiController]
     public class AccountController : ControllerBase
     {
-        public AccountController(UserManager<AppUser> userManager, IConfiguration configuration, AppDbContext db)
+        public AccountController(UserManager<AppUser> userManager, IConfiguration configuration, AppDbContext db, IEmailService emailService)
         {
             _userManager = userManager;
             _configuration = configuration;
             _db = db;
+            _emailService = emailService;
         }
         private readonly AppDbContext _db;
         private readonly UserManager<AppUser> _userManager;
         private readonly IConfiguration _configuration;
+        private readonly IEmailService _emailService;
 
 
-
+        private string GenerateVerificationCode()
+        {
+            return new Random()
+                .Next(100000, 999999)
+                .ToString();
+        }
         [HttpPost("[action]")]
         public async Task<IActionResult> RegisterNewUser(dtoNewUser user)
         {
@@ -67,6 +75,20 @@ namespace DiaMate.Controllers
 
                 if (result.Succeeded)
                 {
+                    string otp = GenerateVerificationCode();
+
+                    appUser.VerificationCode = otp;
+                    appUser.VerificationCodeExpiry = DateTime.UtcNow.AddMinutes(10);
+
+                    await _emailService.SendEmailAsync(
+                   user.Email,
+                   "DiaMate Verification Code",
+                   $@"
+                    <h2>Welcome to DiaMate</h2>
+                    <p>Your verification code is:</p>
+                    <h1>{otp}</h1>
+                    <p>This code expires in 10 minutes.</p>");
+
 
                     return Ok("message: now you have account");
                 }
@@ -136,7 +158,7 @@ namespace DiaMate.Controllers
             return BadRequest($"message: {ModelState}");
         }
 
-        [HttpPatch("[action]")]
+        [HttpPatch("[action]/{PatientId}")]
         [Authorize]
         public async Task<IActionResult> ChangePassword(dtoChangePassword model)
         {
@@ -161,12 +183,6 @@ namespace DiaMate.Controllers
             }
 
             return Ok("message: Password changed successfully");
-        }
-        [HttpGet("[action]")]
-        public async Task<IActionResult> ApiWorks()
-        {
-
-            return Ok("message: Api Works");
         }
     }
 }

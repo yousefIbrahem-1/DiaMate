@@ -171,6 +171,5 @@ C:\Users\yoseef eprahem\source\repos\DiaMate\DiaMate\obj\Debug\net8.0\ref\DiaMat
 C:\Users\yoseef eprahem\source\repos\DiaMate\DiaMate\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\yoseef eprahem\source\repos\DiaMate\DiaMate\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\yoseef eprahem\source\repos\DiaMate\DiaMate\obj\Debug\net8.0\DiaMate.sourcelink.json
-C:\Users\yoseef eprahem\source\repos\DiaMate\DiaMate\obj\Debug\net8.0\swae.build.ex.cache
 C:\Users\yoseef eprahem\source\repos\DiaMate\DiaMate\bin\Debug\net8.0\QRCoder.dll
 C:\Users\yoseef eprahem\source\repos\DiaMate\DiaMate\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

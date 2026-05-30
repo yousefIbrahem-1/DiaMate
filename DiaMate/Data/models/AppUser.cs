@@ -14,7 +14,9 @@ namespace DiaMate.Data.models
         [Required, ForeignKey(nameof(PatientId))]
         public Patient Patient { get; set; }
 
-       
+        public string? VerificationCode { get; set; }
+
+        public DateTime? VerificationCodeExpiry { get; set; }
 
     }
 }

@@ -37,7 +37,6 @@ namespace DiaMate.Controllers
                             PatientId = f.PatientId,
                             Image = f.Image,
                             Ai_detectionResult = f.Ai_detectionResult,
-                            AIConfidence = f.AIConfidence,
                             Notes = f.Notes,
                             UploadDate = f.UploadDate
                         });
@@ -72,7 +71,6 @@ namespace DiaMate.Controllers
                         PatientId = FootUlcerImage.PatientId,
                         Image = FootUlcerImage.Image,
                         Ai_detectionResult = FootUlcerImage.Ai_detectionResult,
-                        AIConfidence = FootUlcerImage.AIConfidence,
                         Notes = FootUlcerImage.Notes,
                         UploadDate = FootUlcerImage.UploadDate
                     };
@@ -109,7 +107,6 @@ namespace DiaMate.Controllers
                             PatientId = image.PatientId,
                             Image = image.Image,
                             Ai_detectionResult = image.Ai_detectionResult,
-                            AIConfidence = image.AIConfidence,
                             Notes = image.Notes,
                             UploadDate = image.UploadDate
                         });
@@ -144,7 +141,6 @@ namespace DiaMate.Controllers
                             PatientId = image.PatientId,
                             Image = image.Image,
                             Ai_detectionResult = image.Ai_detectionResult,
-                            AIConfidence = image.AIConfidence,
                             Notes = image.Notes,
                             UploadDate = image.UploadDate
                         });
@@ -174,7 +170,6 @@ namespace DiaMate.Controllers
                             PatientId = dtoFootUlcerImage.PatientId,
                             Image = dtoFootUlcerImage.Image,
                             Ai_detectionResult = dtoFootUlcerImage.Ai_detectionResult,
-                            AIConfidence = dtoFootUlcerImage.AIConfidence,
                             Notes = dtoFootUlcerImage.Notes,
                             UploadDate = dtoFootUlcerImage.UploadDate
 

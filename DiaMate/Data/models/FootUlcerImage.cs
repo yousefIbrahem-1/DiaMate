@@ -22,9 +22,6 @@ namespace DiaMate.Data.models
         [Required, MaxLength(250)]
         public string Ai_detectionResult { get; set; }
 
-        [Required,Column(TypeName = "decimal(5,2)")]
-        public decimal? AIConfidence { get; set; }
-
         [ MaxLength(500)]
         public string? Notes { get; set; } 
 

@@ -4,6 +4,7 @@ namespace DiaMate.dtoModels
 {
     public class dtoChangePassword
     {
+        
         [Required]
         public string CurrentPassword { get; set; }
         [Required] 
