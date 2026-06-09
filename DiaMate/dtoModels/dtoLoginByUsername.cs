@@ -2,7 +2,7 @@
 
 namespace DiaMate.dtoModels
 {
-    public class dtoLogin
+    public class dtoLoginByUsername
     {
         [Required]
         public string UserName { get; set; }

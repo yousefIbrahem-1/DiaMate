@@ -1,16 +1,6 @@
 [
   {
     "ContainingType": "DiaMate.Controllers.AccountController",
-    "Method": "ApiWorks",
-    "RelativePath": "api/Account/ApiWorks",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "DiaMate.Controllers.AccountController",
     "Method": "ChangePassword",
     "RelativePath": "api/Account/ChangePassword",
     "HttpMethod": "PATCH",
@@ -27,15 +17,31 @@
   },
   {
     "ContainingType": "DiaMate.Controllers.AccountController",
-    "Method": "LogIn",
-    "RelativePath": "api/Account/LogIn",
+    "Method": "LogInByEmail",
+    "RelativePath": "api/Account/LogInByEmail",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "login",
-        "Type": "DiaMate.dtoModels.dtoLogin",
+        "Type": "DiaMate.dtoModels.dtoLoginByEmail",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiaMate.Controllers.AccountController",
+    "Method": "LogInByUsername",
+    "RelativePath": "api/Account/LogInByUsername",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "DiaMate.dtoModels.dtoLoginByUsername",
         "IsRequired": true
       }
     ],
@@ -53,6 +59,43 @@
         "Name": "user",
         "Type": "DiaMate.dtoModels.dtoNewUser",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiaMate.Controllers.AccountController",
+    "Method": "ResendCode",
+    "RelativePath": "api/Account/ResendCode",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DiaMate.Controllers.AccountController",
+    "Method": "VerifyEmail",
+    "RelativePath": "api/Account/VerifyEmail",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -148,32 +191,6 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "DiaMate.Controllers.FoodController",
-    "Method": "GetAllFoodsName",
-    "RelativePath": "api/Food/GetAllFoodsName",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "DiaMate.Controllers.FoodController",
-    "Method": "GetFoodByName",
-    "RelativePath": "api/Food/GetFoodByName",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "name",
-        "Type": "System.String",
-        "IsRequired": false
       }
     ],
     "ReturnTypes": []

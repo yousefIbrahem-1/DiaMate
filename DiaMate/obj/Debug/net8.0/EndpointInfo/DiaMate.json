@@ -36,7 +36,7 @@
         }
       }
     },
-    "/api/Account/LogIn": {
+    "/api/Account/LogInByUsername": {
       "post": {
         "tags": [
           "Account"
@@ -45,21 +45,101 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/dtoLogin"
+                "$ref": "#/components/schemas/dtoLoginByUsername"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/dtoLogin"
+                "$ref": "#/components/schemas/dtoLoginByUsername"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/dtoLogin"
+                "$ref": "#/components/schemas/dtoLoginByUsername"
               }
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Account/LogInByEmail": {
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/dtoLoginByEmail"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/dtoLoginByEmail"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/dtoLoginByEmail"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Account/VerifyEmail": {
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "parameters": [
+          {
+            "name": "email",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "code",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Account/ResendCode": {
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "parameters": [
+          {
+            "name": "email",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -91,18 +171,6 @@
             }
           }
         },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Account/ApiWorks": {
-      "get": {
-        "tags": [
-          "Account"
-        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -250,39 +318,6 @@
             }
           }
         },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Food/GetAllFoodsName": {
-      "get": {
-        "tags": [
-          "Food"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Food/GetFoodByName": {
-      "get": {
-        "tags": [
-          "Food"
-        ],
-        "parameters": [
-          {
-            "name": "name",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -930,7 +965,6 @@
       "dtoFootUlcerImage": {
         "required": [
           "ai_detectionResult",
-          "aiConfidence",
           "image",
           "patientId"
         ],
@@ -952,10 +986,6 @@
             "maxLength": 250,
             "minLength": 1,
             "type": "string"
-          },
-          "aiConfidence": {
-            "type": "number",
-            "format": "double"
           },
           "notes": {
             "maxLength": 500,
@@ -1008,7 +1038,25 @@
         },
         "additionalProperties": false
       },
-      "dtoLogin": {
+      "dtoLoginByEmail": {
+        "required": [
+          "email",
+          "password"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "password": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "dtoLoginByUsername": {
         "required": [
           "password",
           "userName"

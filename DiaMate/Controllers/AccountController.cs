@@ -1,8 +1,8 @@
 ﻿using DiaMate.Data;
 using DiaMate.Data.models;
 using DiaMate.dtoModels;
-using Microsoft.AspNetCore.Authorization;
 using DiaMate.IServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -11,6 +11,7 @@ using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using static System.Net.WebRequestMethods;
 
 namespace DiaMate.Controllers
 {
@@ -44,9 +45,14 @@ namespace DiaMate.Controllers
             if (ModelState.IsValid)
             {
 
+                string otp = GenerateVerificationCode();
                 var appUser = new AppUser()
                 {
                     UserName = user.UserName,
+                    VerificationCode = otp,
+                    VerificationCodeExpiry = DateTime.Now.AddMinutes(10),
+                    EmailConfirmed = false,
+                    Email=user.Email,
                     Patient = new Patient
                     {
                         DateOfDiagnosis = user.DateOfDiagnosis,
@@ -75,18 +81,13 @@ namespace DiaMate.Controllers
 
                 if (result.Succeeded)
                 {
-                    string otp = GenerateVerificationCode();
-
-                    appUser.VerificationCode = otp;
-                    appUser.VerificationCodeExpiry = DateTime.UtcNow.AddMinutes(10);
-
                     await _emailService.SendEmailAsync(
                    user.Email,
                    "DiaMate Verification Code",
                    $@"
                     <h2>Welcome to DiaMate</h2>
                     <p>Your verification code is:</p>
-                    <h1>{otp}</h1>
+                    <h1>{appUser.VerificationCode}</h1>
                     <p>This code expires in 10 minutes.</p>");
 
 
@@ -106,7 +107,7 @@ namespace DiaMate.Controllers
         }
 
         [HttpPost("[action]")]
-        public async Task<IActionResult> LogIn(dtoLogin login)
+        public async Task<IActionResult> LogInByUsername(dtoLoginByUsername login)
         {
             if (ModelState.IsValid)
             {
@@ -116,34 +117,41 @@ namespace DiaMate.Controllers
 
                     if (await _userManager.CheckPasswordAsync(user, login.Password))
                     {
-                        var claims = new List<Claim>();
-                        // claims.Add(new Claim("tokenNo", "12")); //custom claim ( just for know )
-                        claims.Add(new Claim("PatientId", user.PatientId.ToString()));
-                        claims.Add(new Claim(ClaimTypes.Name, user.UserName));
-                        claims.Add(new Claim(ClaimTypes.NameIdentifier, user.Id));
-                        claims.Add(new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()));
-                        var roles = await _userManager.GetRolesAsync(user);
-                        foreach (var role in roles)
+                        if (user.EmailConfirmed == true)
                         {
-                            claims.Add(new Claim(ClaimTypes.Role, role.ToString()));
+                            var claims = new List<Claim>();
+                            // claims.Add(new Claim("tokenNo", "12")); //custom claim ( just for know )
+                            claims.Add(new Claim("PatientId", user.PatientId.ToString()));
+                            claims.Add(new Claim(ClaimTypes.Name, user.UserName));
+                            claims.Add(new Claim(ClaimTypes.NameIdentifier, user.Id));
+                            claims.Add(new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()));
+                            var roles = await _userManager.GetRolesAsync(user);
+                            foreach (var role in roles)
+                            {
+                                claims.Add(new Claim(ClaimTypes.Role, role.ToString()));
+                            }
+                            //signingCredentials
+                            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:SecretKey"]));
+                            var signingCredentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+                            var token = new JwtSecurityToken(
+                               claims: claims,
+                               issuer: _configuration["JWT:Issuer"],
+                               audience: _configuration["JWT:Audience"],
+                               expires: DateTime.Now.AddDays(7),
+                               signingCredentials: signingCredentials);
+                            var _token = new
+                            {
+                                token = new JwtSecurityTokenHandler().WriteToken(token),
+                                expiration = token.ValidTo,
+
+                            };
+                            return Ok(_token);
                         }
-                        //signingCredentials
-                        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:SecretKey"]));
-                        var signingCredentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-
-                        var token = new JwtSecurityToken(
-                           claims: claims,
-                           issuer: _configuration["JWT:Issuer"],
-                           audience: _configuration["JWT:Audience"],
-                           expires: DateTime.Now.AddDays(7),
-                           signingCredentials: signingCredentials);
-                        var _token = new
+                        else
                         {
-                            token = new JwtSecurityTokenHandler().WriteToken(token),
-                            expiration = token.ValidTo,
-
-                        };
-                        return Ok(_token);
+                            return BadRequest("message: Email is not Active");
+                        }
                     }
                     else
                     {
@@ -158,7 +166,121 @@ namespace DiaMate.Controllers
             return BadRequest($"message: {ModelState}");
         }
 
-        [HttpPatch("[action]/{PatientId}")]
+        [HttpPost("[action]")]
+        public async Task<IActionResult> LogInByEmail(dtoLoginByEmail login)
+        {
+            if (ModelState.IsValid)
+            {
+                AppUser? user = await _userManager.FindByEmailAsync(login.Email);
+                if (user != null)
+                {
+
+                    if (await _userManager.CheckPasswordAsync(user, login.Password))
+                    {
+                        if (user.EmailConfirmed == true)
+                        {
+                            var claims = new List<Claim>();
+                            // claims.Add(new Claim("tokenNo", "12")); //custom claim ( just for know )
+                            claims.Add(new Claim("PatientId", user.PatientId.ToString()));
+                            claims.Add(new Claim(ClaimTypes.Name, user.UserName));
+                            claims.Add(new Claim(ClaimTypes.NameIdentifier, user.Id));
+                            claims.Add(new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()));
+                            var roles = await _userManager.GetRolesAsync(user);
+                            foreach (var role in roles)
+                            {
+                                claims.Add(new Claim(ClaimTypes.Role, role.ToString()));
+                            }
+                            //signingCredentials
+                            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:SecretKey"]));
+                            var signingCredentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+                            var token = new JwtSecurityToken(
+                               claims: claims,
+                               issuer: _configuration["JWT:Issuer"],
+                               audience: _configuration["JWT:Audience"],
+                               expires: DateTime.Now.AddDays(7),
+                               signingCredentials: signingCredentials);
+                            var _token = new
+                            {
+                                token = new JwtSecurityTokenHandler().WriteToken(token),
+                                expiration = token.ValidTo,
+
+                            };
+                            return Ok(_token);
+                        }
+                        else
+                        {
+                            return BadRequest("message: Email is not Active");
+                        }
+                    }
+                    else
+                    {
+                        return Unauthorized("message: Password is invalid");
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Email is invalid");
+                }
+            }
+            return BadRequest($"message: {ModelState}");
+        }
+
+        [HttpPost("[action]")]
+        public async Task<IActionResult> VerifyEmail(string email,string code)
+        {
+            var user =
+                await _userManager.FindByEmailAsync(email);
+
+            if (user == null)
+                return BadRequest("message: User not found");
+
+            if (user.VerificationCodeExpiry > DateTime.Now.AddMinutes(10))
+                return BadRequest("message: Code expired");
+
+            if (user.VerificationCode != code)
+                return BadRequest("message: Invalid code");
+
+            user.EmailConfirmed = true;
+            user.VerificationCode = null;
+            user.VerificationCodeExpiry = null;
+
+            await _userManager.UpdateAsync(user);
+
+            return Ok("Email verified successfully");
+        }
+
+        [HttpPost("[action]")]
+        public async Task<IActionResult> ResendCode(string email)
+        {
+            var user = await _userManager.FindByEmailAsync(email);
+
+            if (user == null)
+                return BadRequest("User not found");
+
+            if (user.EmailConfirmed)
+                return BadRequest("Email already verified");
+
+            string otp = GenerateVerificationCode();
+
+            user.VerificationCode = otp;
+            user.VerificationCodeExpiry = DateTime.Now.AddMinutes(10);
+
+            await _userManager.UpdateAsync(user);
+
+            await _emailService.SendEmailAsync(
+                email,
+                "DiaMate Verification Code",
+                $@"
+        <h2>DiaMate Verification</h2>
+        <p>Your new verification code is:</p>
+        <h1>{user.VerificationCode}</h1>
+        <p>This code expires in 10 minutes.</p>");
+
+            return Ok("New verification code sent");
+        }
+
+        [HttpPatch("[action]")]
         [Authorize]
         public async Task<IActionResult> ChangePassword(dtoChangePassword model)
         {

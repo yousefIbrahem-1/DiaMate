@@ -32,8 +32,6 @@ namespace DiaMate.Data.models
        ErrorMessage = "Value for {0} must be between {1} and {2}.")]
         public double Height { get; set; } 
 
-        public byte[]? QrCodeBase64 { get; set; }
-
         public string? Notes {  get; set; }=null;
 
       
