@@ -1,7 +1,7 @@
+# DiaMate
 
-# DiaMate 
 <p align="center">
-  <img src="logo.png" width="180" />
+  <img src="Logo.png" width="180" />
 </p>
 Welcome to the **DiaMate** (DiaMate is an AI-powered mobile health assistant for diabetic patients, providing smart guidance using a medical RAG chatbot, food-image calorie estimation, diabetic-foot-ulcer analysis, and automated lab-result processing. The system helps users track glucose, medication, and meals with high accuracy.) — a dedicated backend application built on ASP.NET Core to manage data, authentication, and services.
 The system provides a secure, flexible API foundation using Entity Framework Core, SQL Server, and JWT Authentication.
@@ -33,11 +33,11 @@ The **DiaMate Web API** is an ASP.NET Core application built to serve as a secur
 
 ### Key Capabilities:
 
-* **API Service**: Provides RESTful endpoints via Controllers.
-* **Security**: Implements user authentication and authorization using ASP.NET Core Identity and custom JWT (JSON Web Token).
-* **Data Management**: Uses Entity Framework Core with SQL Server for robust data storage.
-* **CORS**: Configured for local development integration with a frontend running on `http://localhost:5173`.
-* **Documentation**: Includes Swagger/OpenAPI for easy endpoint discovery and testing.
+- **API Service**: Provides RESTful endpoints via Controllers.
+- **Security**: Implements user authentication and authorization using ASP.NET Core Identity and custom JWT (JSON Web Token).
+- **Data Management**: Uses Entity Framework Core with SQL Server for robust data storage.
+- **CORS**: Configured for local development integration with a frontend running on `http://localhost:5173`.
+- **Documentation**: Includes Swagger/OpenAPI for easy endpoint discovery and testing.
 
 ---
 
@@ -49,17 +49,17 @@ The project follows the standard **ASP.NET Core Web API** structure, utilizing d
 
 #### 1. **Presentation Layer (API Endpoints)**
 
-* Handled by **Controllers** which receive HTTP requests.
-* The layer where routing, model binding, and authorization take place.
+- Handled by **Controllers** which receive HTTP requests.
+- The layer where routing, model binding, and authorization take place.
 
 #### 2. **Service/Business Logic Layer** (Implied/Planned)
 
-* *Note: While not explicitly shown in `Program.cs`, this layer will contain the core logic and service classes for data manipulation and business validation.*
+- _Note: While not explicitly shown in `Program.cs`, this layer will contain the core logic and service classes for data manipulation and business validation._
 
 #### 3. **Data Access Layer (DAL)**
 
-* Implemented using **Entity Framework Core** and the `AppDbContext`.
-* Handles communication with the SQL Server database.
+- Implemented using **Entity Framework Core** and the `AppDbContext`.
+- Handles communication with the SQL Server database.
 
 ---
 
@@ -67,23 +67,24 @@ The project follows the standard **ASP.NET Core Web API** structure, utilizing d
 
 ### Core Technologies:
 
-* **ASP.NET Core (Latest)**
-* **C#** (Backend Language)
-* **SQL Server** (Primary database)
-* **Entity Framework Core** (ORM/Data Access)
-* **ASP.NET Core Identity** (User/Role Management)
-* **JWT (JSON Web Tokens)** (Authentication)
+- **ASP.NET Core (Latest)**
+- **C#** (Backend Language)
+- **SQL Server** (Primary database)
+- **Entity Framework Core** (ORM/Data Access)
+- **ASP.NET Core Identity** (User/Role Management)
+- **JWT (JSON Web Tokens)** (Authentication)
 
 ### Additional Tools:
 
-* **Swagger/OpenAPI** (API Documentation)
-* **CORS Middleware** (Cross-Origin requests)
+- **Swagger/OpenAPI** (API Documentation)
+- **CORS Middleware** (Cross-Origin requests)
 
 ---
 
 ## Project Structure
 
 The structure is based on a single ASP.NET Core Web API project.
+
 ```
 DiaMate/
 │
@@ -98,30 +99,31 @@ DiaMate/
 │
 └── DiaMate.sln                  # Visual Studio Solution File
 ```
+
 ---
 
 ## Features
 
 ### 1. User Authentication (Identity)
 
-* User registration and login (via Identity).
-* Role management (via IdentityRole).
-* Secure token generation (JWT) upon successful login.
+- User registration and login (via Identity).
+- Role management (via IdentityRole).
+- Secure token generation (JWT) upon successful login.
 
 ### 2. Authorization
 
-* Secured API endpoints using JWT Bearer Authentication.
-* Role-based access control (RBAC) (via `IdentityRole`).
+- Secured API endpoints using JWT Bearer Authentication.
+- Role-based access control (RBAC) (via `IdentityRole`).
 
 ### 3. Database Management
 
-* Relational data stored in SQL Server.
-* Data access managed via Entity Framework Core.
+- Relational data stored in SQL Server.
+- Data access managed via Entity Framework Core.
 
 ### 4. API Accessibility
 
-* CORS configured for frontend development at `http://localhost:5173`.
-* Automatic API documentation via Swagger UI.
+- CORS configured for frontend development at `http://localhost:5173`.
+- Automatic API documentation via Swagger UI.
 
 ---
 
@@ -129,9 +131,9 @@ DiaMate/
 
 ### Prerequisites
 
-* **.NET SDK** (matching the project's target framework - typically .NET 8 or newer)
-* **SQL Server** instance
-* **Visual Studio** (Version 17.14.36327.8 or newer, as per the solution file )
+- **.NET SDK** (matching the project's target framework - typically .NET 8 or newer)
+- **SQL Server** instance
+- **Visual Studio** (Version 17.14.36327.8 or newer, as per the solution file )
 
 ### Steps to Run:
 
@@ -141,7 +143,7 @@ DiaMate/
     dotnet restore
     ```
 3.  **Update Database Connection**
-    * Configure the `"MyConnection"` string in `appsettings.json` (see Configuration).
+    - Configure the `"MyConnection"` string in `appsettings.json` (see Configuration).
 4.  **Apply Migrations** (Assuming migrations have been created)
     ```bash
     dotnet ef database update
@@ -160,10 +162,10 @@ DiaMate/
 
 The connection string for SQL Server is referenced in `Program.cs` as `"MyConnection"`.
 
-
 **Location:** `appsettings.json`
 
-### JSON  
+### JSON
+
 ```
 {
   "JwtSettings": {
@@ -175,6 +177,7 @@ The connection string for SQL Server is referenced in `Program.cs` as `"MyConnec
 
 
 ```
+
 ```
 {
   "ConnectionStrings": {
@@ -182,19 +185,23 @@ The connection string for SQL Server is referenced in `Program.cs` as `"MyConnec
   }
 }
 ```
+
 ## Modules
 
 ### 1. Identity Module
-- `AppUser` and `IdentityRole` management  
-- Stores user credentials and profile data  
+
+- `AppUser` and `IdentityRole` management
+- Stores user credentials and profile data
 
 ### 2. Data Module
-- `AppDbContext` for managing tables  
-- Handles CRUD (Create, Read, Update, Delete) operations  
+
+- `AppDbContext` for managing tables
+- Handles CRUD (Create, Read, Update, Delete) operations
 
 ### 3. Authentication Module
-- Handles validation and generation of **JWT tokens**  
-- Secures endpoints using the `[Authorize]` attribute  
+
+- Handles validation and generation of **JWT tokens**
+- Secures endpoints using the `[Authorize]` attribute
 
 ---
 
@@ -214,11 +221,13 @@ graph TD
     D --> |JSON Response| C
     C --> A
 ```
+
 ## Database Setup
 
 The project uses **Entity Framework Core Code-First**.
 
 ### Required Models
+
 - `AppUser` (inherits from `IdentityUser`)
 - `IdentityRole`
 - Additional domain models (e.g., `Patient`, `Reading`, etc.)
@@ -228,11 +237,13 @@ The project uses **Entity Framework Core Code-First**.
 ## Setup Steps
 
 ### 1. Create initial migration
+
 ```bash
 
 dotnet ef database update
 
 ```
+
 ## Business Rules
 
 - All endpoints requiring user-specific data must be protected by `UseAuthentication()` and `UseAuthorization()`.
@@ -245,6 +256,7 @@ dotnet ef database update
 ## Error Handling
 
 ### HTTP Status Codes
+
 - **200 OK**
 - **201 Created**
 - **400 Bad Request**
@@ -253,10 +265,12 @@ dotnet ef database update
 - **404 Not Found**
 
 ### Validation
+
 - Model validation inside **Controllers**
 - Business-level validation inside the **Service Layer**
 
 ### Database Exceptions
+
 - EF Core exceptions should be **caught** and mapped to meaningful **HTTP responses**.
 
 ---
@@ -264,6 +278,7 @@ dotnet ef database update
 ## Testing
 
 ### API Testing (Manual / Postman)
+
 - Test secured endpoints **with and without a valid JWT**
 - Verify **CRUD operations** for core models
 - Test **successful user registration** and **token generation**
@@ -271,6 +286,7 @@ dotnet ef database update
 ---
 
 ## Future Enhancements
+
 - Unit tests for Controller and Service Layer
 - Integration tests covering the **API request pipeline**, including database access
 
