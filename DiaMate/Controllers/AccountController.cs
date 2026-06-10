@@ -82,13 +82,147 @@ namespace DiaMate.Controllers
                 if (result.Succeeded)
                 {
                     await _emailService.SendEmailAsync(
-                   user.Email,
-                   "DiaMate Verification Code",
-                   $@"
-                    <h2>Welcome to DiaMate</h2>
-                    <p>Your verification code is:</p>
-                    <h1>{appUser.VerificationCode}</h1>
-                    <p>This code expires in 10 minutes.</p>");
+      user.Email,
+      "Welcome to DiaMate",
+      $@"
+<!DOCTYPE html>
+<html>
+<body style='margin:0;
+             padding:0;
+             background:#f4f7fb;
+             font-family:Segoe UI,Arial,sans-serif;'>
+
+<div style='max-width:650px;
+            margin:40px auto;
+            background:#ffffff;
+            border-radius:20px;
+            overflow:hidden;
+            box-shadow:0 5px 25px rgba(0,0,0,0.08);'>
+
+    <div style='background:linear-gradient(135deg,#7dd3fc,#38bdf8);
+                padding:40px;
+                text-align:center;'>
+
+        <img src='https://raw.githubusercontent.com/yousefIbrahem-1/DiaMate/main/Logo.png'
+             width='120'
+             alt='DiaMate Logo'
+             style='margin-bottom:15px;' />
+
+        <h1 style='color:white;
+                   margin:0;'>
+            DiaMate
+        </h1>
+
+        <p style='color:#e0f2fe;
+                  margin-top:10px;'>
+
+            Smart Diabetes Management Platform
+
+        </p>
+
+    </div>
+
+    <div style='padding:40px;'>
+
+        <h2 style='color:#1f2937;'>
+
+            Welcome {user.FirstName} 👋
+
+        </h2>
+
+        <p style='color:#6b7280;
+                  line-height:1.8;'>
+
+            Thank you for joining DiaMate.
+
+            To complete your registration,
+            please verify your email address using
+            the verification code below.
+
+        </p>
+
+        <div style='margin:35px 0;
+                    text-align:center;'>
+
+            <div style='display:inline-block;
+                        background:#f0f9ff;
+                        border:2px dashed #38bdf8;
+                        border-radius:15px;
+                        padding:18px 35px;'>
+
+                <span style='font-size:28px;
+                             font-weight:600;
+                             letter-spacing:6px;
+                             color:#0284c7;'>
+
+                    {appUser.VerificationCode}
+
+                </span>
+
+            </div>
+
+        </div>
+
+        <div style='background:#eff6ff;
+                    border-left:5px solid #38bdf8;
+                    padding:15px;
+                    border-radius:10px;'>
+
+            <strong style='color:#0284c7;'>
+
+                Important:
+
+            </strong>
+
+            This verification code will expire in
+            10 minutes.
+
+        </div>
+
+        <p style='margin-top:25px;
+                  font-size:13px;
+                  color:#9ca3af;
+                  text-align:center;'>
+
+            If you did not create a DiaMate account,
+            please ignore this email.
+
+        </p>
+
+        <div style='margin-top:35px;
+                    padding-top:20px;
+                    border-top:1px solid #e5e7eb;
+                    text-align:center;'>
+
+            <p style='color:#6b7280;
+                      margin-bottom:5px;'>
+
+                Best Regards,
+
+            </p>
+
+            <h3 style='margin:0;
+                       color:#0284c7;'>
+
+                DiaMate Team
+
+            </h3>
+
+            <p style='color:#9ca3af;
+                      font-size:13px;'>
+
+                Smart Diabetes Management Platform
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>");
 
 
                     return Ok("message: now you have account");
@@ -238,6 +372,9 @@ namespace DiaMate.Controllers
             if (user.VerificationCodeExpiry > DateTime.Now.AddMinutes(10))
                 return BadRequest("message: Code expired");
 
+            if (user.EmailConfirmed)
+                return BadRequest("Email is already verified.");
+
             if (user.VerificationCode != code)
                 return BadRequest("message: Invalid code");
 
@@ -249,6 +386,7 @@ namespace DiaMate.Controllers
 
             return Ok("Email verified successfully");
         }
+
 
         [HttpPost("[action]")]
         public async Task<IActionResult> ResendCode(string email)
@@ -269,13 +407,141 @@ namespace DiaMate.Controllers
             await _userManager.UpdateAsync(user);
 
             await _emailService.SendEmailAsync(
-                email,
-                "DiaMate Verification Code",
-                $@"
-        <h2>DiaMate Verification</h2>
-        <p>Your new verification code is:</p>
-        <h1>{user.VerificationCode}</h1>
-        <p>This code expires in 10 minutes.</p>");
+             email,
+             "DiaMate - New Verification Code",
+             $@"
+<!DOCTYPE html>
+<html>
+<body style='margin:0;
+             padding:0;
+             background:#f4f7fb;
+             font-family:Segoe UI,Arial,sans-serif;'>
+
+<div style='max-width:650px;
+            margin:40px auto;
+            background:#ffffff;
+            border-radius:20px;
+            overflow:hidden;
+            box-shadow:0 5px 25px rgba(0,0,0,0.08);'>
+
+    <div style='background:linear-gradient(135deg,#7dd3fc,#38bdf8);
+                padding:40px;
+                text-align:center;'>
+
+        <img src='https://raw.githubusercontent.com/yousefIbrahem-1/DiaMate/main/Logo.png'
+             width='120'
+             alt='DiaMate Logo'
+             style='margin-bottom:15px;' />
+
+        <h1 style='color:white;
+                   margin:0;'>
+            DiaMate
+        </h1>
+
+        <p style='color:#e0f2fe;
+                  margin-top:10px;'>
+            Smart Diabetes Management Platform
+        </p>
+
+    </div>
+
+    <div style='padding:40px;'>
+
+        <h2 style='color:#1f2937;'>
+            New Verification Code Sent 🔄
+        </h2>
+
+        <p style='color:#6b7280;
+                  line-height:1.8;'>
+
+            You requested a new verification code.
+
+            Please use the code below to verify
+            your DiaMate account.
+
+        </p>
+
+        <div style='margin:35px 0;
+                    text-align:center;'>
+
+            <div style='display:inline-block;
+                        background:#f0f9ff;
+                        border:2px dashed #38bdf8;
+                        border-radius:15px;
+                        padding:18px 35px;'>
+
+                <span style='font-size:28px;
+                             font-weight:600;
+                             letter-spacing:6px;
+                             color:#0284c7;'>
+
+                    {user.VerificationCode}
+
+                </span>
+
+            </div>
+
+        </div>
+
+        <div style='background:#eff6ff;
+                    border-left:5px solid #38bdf8;
+                    padding:15px;
+                    border-radius:10px;'>
+
+            <strong style='color:#0284c7;'>
+                Important:
+            </strong>
+
+            This verification code will expire in
+            10 minutes. Any previous verification
+            code is no longer valid.
+
+        </div>
+
+        <p style='margin-top:25px;
+                  font-size:13px;
+                  color:#9ca3af;
+                  text-align:center;'>
+
+            If you didn't request a new code,
+            please ignore this email.
+
+        </p>
+
+        <div style='margin-top:35px;
+                    padding-top:20px;
+                    border-top:1px solid #e5e7eb;
+                    text-align:center;'>
+
+            <p style='color:#6b7280;
+                      margin-bottom:5px;'>
+
+                Best Regards,
+
+            </p>
+
+            <h3 style='margin:0;
+                       color:#0284c7;'>
+
+                DiaMate Team
+
+            </h3>
+
+            <p style='color:#9ca3af;
+                      font-size:13px;'>
+
+                Smart Diabetes Management Platform
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>");
 
             return Ok("New verification code sent");
         }

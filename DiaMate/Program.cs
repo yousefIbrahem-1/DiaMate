@@ -33,7 +33,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IEmailService, EmailService>();
-builder.Services.AddScoped<IQrCodeService, QrCodeService>();
+builder.Services.AddScoped<IUserCleanupService, UserCleanupService>();
+builder.Services.AddHostedService<UserCleanupBackgroundService>();
 
 builder.Services.Configure<IdentityOptions>(options =>
 {
