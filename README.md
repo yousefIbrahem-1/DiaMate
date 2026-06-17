@@ -15,6 +15,10 @@ The system provides a secure, flexible API foundation using Entity Framework Cor
 3. [Technology Stack](#technology-stack)
 4. [Project Structure](#project-structure)
 5. [Features](#features)
+7. [Security Features](#security-features)
+8. [Background Services](#background-services)
+9. [Email Services](#email-services)
+10. [Validation](#validation)
 6. [Getting Started](#getting-started)
 7. [Configuration](#configuration)
 8. [Modules](#modules)
@@ -104,28 +108,85 @@ DiaMate/
 
 ## Features
 
-### 1. User Authentication (Identity)
+Instead of basic tracking options, the backend exposes highly granular endpoints categorized into complex operational subsystems.
 
-- User registration and login (via Identity).
-- Role management (via IdentityRole).
-- Secure token generation (JWT) upon successful login.
+### 1. Identity & Access Management (IAM)
+* **Robust Core Security**: Integrates secure registration, login, token refresh, and credential updating.
+* **Role-Based Authorization (RBAC)**: Maps explicit permission sets to defined application roles (`Admin`, `Patient`, `Doctor`).
+* **JWT Access Flow**: Emits encrypted JSON Web Tokens containing claim graphs for identification.
 
-### 2. Authorization
+### 2. Profile & Relationship Operations
+* **Patient Management**: Configures baseline demographics, physical metrics (height, weight), diabetes categorization profiles, and ties data models to security keys.
 
-- Secured API endpoints using JWT Bearer Authentication.
-- Role-based access control (RBAC) (via `IdentityRole`).
+### 3. Diabetes Tracking Infrastructure
+* **Blood Glucose Module**: Captures absolute glucose quantities, logs timestamps, tracks fasting vs. post-prandial states, and monitors contextual metrics.
+* **Medication Registry**: Tracks medication inventories, logs dosages, maintains injection schedules, and records consumer compliance.
+* **Meal Analytics Interface**: Records caloric intake, labels meal definitions (breakfast, lunch, dinner, snack), and handles historical structural references.
 
-### 3. Database Management
-
-- Relational data stored in SQL Server.
-- Data access managed via Entity Framework Core.
-
-### 4. API Accessibility
-
-- CORS configured for frontend development at `http://localhost:5173`.
-- Automatic API documentation via Swagger UI.
+### 4. Enterprise Subsystems
+* **Laboratory Operations**: Allows uploading structural biomedical laboratory data definitions and indexes laboratory logs.
+* **File Upload Service**: Sanitizes and processes multi-part file-stream uploads for tracking documentation.
+* **Notification System**: Dispatches alert indices based on threshold validations (e.g., missed records, critical glucose levels).
 
 ---
+
+## Security Features
+
+The DiaMate API relies on strict industry-standard configurations to maintain security and absolute data privacy:
+
+| Security Vector | Implementation Detail | Target Protection |
+| :--- | :--- | :--- |
+| **Authentication** | Bearer JWT Cryptography | Prevents Session Hijacking & Anonymity |
+| **Password Storage** | PBKDF2 with SHA-256 Hashing | Prevents Rainbow Table & Cleartext Exposure |
+| **CORS Enforcer** | Explicit Whitelists (`http://localhost:5173`) | Mitigates Cross-Site Scripting Data Extraction |
+| **Authorization Filters**| Declarative Role Policies (`[Authorize]`) | Mitigates Privilege Escalation Vulnerabilities |
+
+---
+
+## Background Services
+
+The API incorporates an independent background processing engine utilizing native `IHostedService` interfaces.
+
+### Automated Account Maintenance
+The system registers the `UnverifiedUserCleanupService`. This worker runs inside the application background pipeline on a fixed 24-hour interval. It evaluates the application state database to identify user records that have remained unverified past the valid structural period (e.g., 48 hours post-registration) and removes them.
+
+```mermaid
+stateDiagram-v2
+    [*] --> EvaluatingDatabase : Interval Triggered (24h)
+    EvaluatingDatabase --> CheckingVerification : Query AppUsers
+    CheckingVerification --> PurgingUser : Verification Confirmed == False AND Age > 48h
+    CheckingVerification --> RetainingUser : Verification Confirmed == True OR Age <= 48h
+    PurgingUser --> DatabaseCommit : Execute Cascade Delete
+    RetainingUser --> [*]
+    DatabaseCommit --> [*]
+```
+## Email Services
+
+Communication operations utilize a decoupled, interface-driven service layer (`IEmailService`) transmitting over secure SMTP connections:
+
+* **Email Verification Tokens**: On account creation, the system generates an ephemeral token and appends it to a verification email required to unlock authorization pathways.
+* **Transactional Dispatching**: Implements asynchronous execution blocks to ensure that outbound network performance constraints do not impact active request threads.
+
+---
+
+## Validation
+
+Input validation blocks data corruption attempts before requests reach the execution layers.
+
+```text
+Incoming HTTP Request
+      │
+      ▼
+[DataAnnotation Attributes] ───► Invalid? ───► Auto 400 Bad Request Response
+      │
+      ▼ Valid
+[Custom Validation Logic]   ───► Fails?   ───► Custom Validation Exception
+      │
+      ▼ Passes
+Core Service Execution
+```
+* **Standard DataAnnotations**: Enforces structural validity via attributes like `[Required]`, `[EmailAddress]`, and `[StringLength]`.
+* **Custom Validation Attributes**: Incorporates custom health-domain attributes (e.g., `[FutureDateAttribute]`) to protect the database layer against illogical datetimes.
 
 ## Getting Started
 
